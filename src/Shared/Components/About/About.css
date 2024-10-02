@@ -1,0 +1,8 @@
+.testimonial-slide {
+    transform: scale(1); /* Default scale */
+    transition: transform 0.5s ease-in-out;
+  }
+  
+  .swiper-slide-active .testimonial-slide {
+    transform: scale(1.2); /* Scale the active slide */
+  }

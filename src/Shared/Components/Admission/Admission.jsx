@@ -51,7 +51,7 @@ function Admission() {
   ];
   return (
     <>
-      <section className="bg-[url('/assets/Images/Header/Group-3.png')]  bg-no-repeat  bg-cover bg-center  h-[20vh] my-8 ">
+      <section className="bg-[url('/assets/Images/Header/Group-3.png')]  bg-no-repeat  bg-cover bg-center  h-[20vh] my-4 ">
         <div className='max-w-[90rem] mx-auto px-10 h-[20vh] items-center grid '>
           <div className='  md:text-5xl text-2xl text-white'>
             Admission
@@ -84,7 +84,7 @@ function Admission() {
                   THE THREE
                 </div>
                 <div className="bg-[#025450] text-white px-4 py-2 text-sm font-bold">
-                  STEP RULE
+                  RULES
                 </div>
               </div>
             </div>
@@ -177,7 +177,7 @@ function Admission() {
               <li>75% of the Total Fees are To Be Paid At The Time Of Admission, Only DD & Cheques or NEFT or UPI are Accepted</li>
               <li>Admission Will Be Forwarded After the Realisation of the Cheque Only</li>
               <li>Post Dated Cheques Are Not Accepted / Taxes As Applicable</li>
-              <li>Keep the Receipts Safely, Do Not Lose the Receipts, Fee Once Paid Will Not Be Refunded</li>
+              <li>Keep the Receipts Safely, Do Not Lose the Receipts, Fee Once Paid Will Not Be Refunded"</li>
             </ul>
           </div>
         </section>

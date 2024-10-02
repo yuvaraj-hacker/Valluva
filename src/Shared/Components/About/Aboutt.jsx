@@ -57,7 +57,7 @@ function Aboutt() {
   return (
     <>
 
-      <section className="bg-[url('/assets/Images/Header/Group-3.png')]  bg-no-repeat  bg-cover bg-center  h-[20vh] my-8 ">
+      <section className="bg-[url('/assets/Images/Header/Group-3.png')]  bg-no-repeat  bg-cover bg-center  h-[20vh] my-4 ">
         <div className="max-w-[90rem] mx-auto px-10 h-[20vh] items-center grid ">
           <div className="  md:text-5xl text-2xl text-white">About Us</div>
         </div>
@@ -65,17 +65,26 @@ function Aboutt() {
 
       <section className="max-w-[87rem]  px-5  md:my-20 mx-auto">
         <div className="grid lg:grid-cols-5 grid-cols-1  items-center">
-          <div className="col-span-2 ">
-            <img
-              className="md:px-0 px-5  mx-auto cursor-pointer"
-              src="/assets/Images/About/design copy.png"
-              alt=""
-            />
+          <div className="col-span-2 bg-[#025450] p-10 rounded-3xl">
+            <div className='flex justify-center flex-col md:my-14 my-5 text-white space-y-8 items-center'>
+
+              <div className='text-center'>
+
+             
+              <img className='mx-auto' src="/assets/Images/Header/Logo 1.png" alt="" />
+              <p className="text-xl">Best Distance Education Center In Town!</p>
+              </div>
+              <p className="">Your Partner In Academic Growth</p>
+              <Link to='/contact'>
+            
+              <p className="underline hover:text-[#FFC906]"> Get In Touch </p>
+              </Link>
+            </div>
           </div>
           <div className="col-span-3  border rounded-xl my-5 md:p-10 p-4 space-y-3">
             <p className="text-xl font-bold text-[#025450]">VALUVAS</p>
             <div className="inline-flex items-center rounded-full overflow-hidden">
-              <div className="bg-[#FFC906] text-white px-4 py-2 text-sm font-bold">
+              <div className="bg-[#FFC906] text-[#025450] px-4 py-2 text-sm font-bold">
                 THE BEST
               </div>
               <div className="bg-[#025450] text-white px-4 py-2 text-sm font-bold">
@@ -112,7 +121,7 @@ function Aboutt() {
             <Link to='/course'>
 
               <div className="text-end">
-                <button className="border rounded-2xl font-semibold md:text-base text-sm bg-[#FFC906] text-[#025450] p-2">
+                <button className="border rounded-2xl font-semibold md:text-base text-sm bg-[#FFC906] hover:text-[#FFC906] hover:bg-[#025450] text-[#025450] p-2 px-3 mt-2">
                   View Courses
                 </button>
               </div>
@@ -125,7 +134,7 @@ function Aboutt() {
         <div className="text-center my-5 space-y-2">
           <p className="text-center text-[#025450] text-lg">Message from the</p>
           <div className="inline-flex items-center rounded-full overflow-hidden">
-            <div className="bg-[#FFC906] text-white px-4 py-2 text-sm font-bold">
+            <div className="bg-[#FFC906] text-[#025450] px-4 py-2 text-sm font-bold">
               DIRECTOR
             </div>
             <div className="bg-[#025450] text-white px-4 py-2 text-sm font-bold">
@@ -176,7 +185,7 @@ function Aboutt() {
             <p className="text-xl font-bold text-[#025450] text-center">Road to success</p>
             <div className="flex justify-center">
               <div className="inline-flex items-center rounded-full overflow-hidden">
-                <div className="bg-[#FFC906] text-white px-4 py-2 text-sm font-bold">
+                <div className="bg-[#FFC906] text-[#025450]e px-4 py-2 text-sm font-bold">
                   THE THREE
                 </div>
                 <div className="bg-[#025450] text-white px-4 py-2 text-sm font-bold">
@@ -239,8 +248,8 @@ function Aboutt() {
       </section>
 
 
-      <div className=" mx-auto  bg-[url('/assets/Images/Header/Group-3.png')]  bg-no-repeat  bg-cover bg-center lg:px-10   mb-20 text-white lg:p-20 p-10">
-        <div className=' grid lg:grid-cols-4 grid-cols-2 max-w-[85rem]  mx-auto px-5'>
+      <div className=" mx-auto  bg-[url('/assets/Images/Header/Group-3.png')]  bg-no-repeat  bg-cover bg-center lg:px-10   mb-20 text-white lg:p-20 p-5">
+        <div className=' grid lg:grid-cols-4 grid-cols-2 max-w-[85rem] lg:gap-0 gap-3  mx-auto px-5'>
 
 
           <div>
@@ -261,11 +270,20 @@ function Aboutt() {
           </div>
         </div>
       </div>
-      <section className="max-w-[87rem]  px-5  space-y-5  mx-auto my-20">
-        <div className="w-fit h-fit p-1 rounded-2xl bg-[#FFC906] mx-auto text-black px-5">
+      <section className="max-w-[87rem]  px-5  space-y-4  mx-auto my-20">
+        <div className="   text-center text-[#025450] px-5">
           <p>Hear From Our</p>
         </div>
-        <p className="text-3xl font-bold text-center text-[#025450]">Happy Students</p>
+        <div className="flex justify-center md:px-0 px-5">
+          <div className="inline-flex items-center rounded-full overflow-hidden">
+            <div className="bg-[#FFC906] text-[#025450] px-4 py-2 text-sm font-bold">
+              HAPPY
+            </div>
+            <div className="bg-[#025450] text-white px-4 py-2 text-sm font-bold">
+              STUDENTS
+            </div>
+          </div>
+        </div>
         <div className='my-5 '>
 
 
@@ -287,7 +305,7 @@ function Aboutt() {
           >
             {testimonials.map((testimonial, index) => (
               <SwiperSlide key={index}>
-                <div className="bg-[#FFF6D3] p-6 shadow-md rounded-lg space-y-4 text-center cursor-pointer">
+                <div className="bg-[#FFF6D3] p-6   space-y-4 text-center cursor-pointer">
                   <img
                     className="mx-auto "
                     src={testimonial.avatar}

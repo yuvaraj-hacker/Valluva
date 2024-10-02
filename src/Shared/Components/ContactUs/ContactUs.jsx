@@ -4,7 +4,7 @@ function ContactUs() {
   return (
 
     <>
-      <section className="bg-[url('/assets/Images/Header/Group-3.png')]  bg-no-repeat  bg-cover bg-center  h-[20vh] my-8 ">
+      <section className="bg-[url('/assets/Images/Header/Group-3.png')]  bg-no-repeat  bg-cover bg-center  h-[20vh] my-4 ">
         <div className='max-w-[90rem] mx-auto px-10 h-[20vh] items-center grid '>
           <div className=' md:text-5xl text-2xl text-white'>
             Contact Us
@@ -16,49 +16,216 @@ function ContactUs() {
 
 
 
-      {/* <section>
-        <div className="flex justify-center">
-          <div className="inline-flex items-center rounded-full flex-wrap overflow-hidden">
-            <div className="bg-[#FFC906] md:text-base text-sm text-[#025450] px-4 py-2  font-bold">
+      <section className='lg:my-10 my-10'>
+
+
+
+        <div className='flex justify-center'>
+
+
+          <div className="inline-flex items-center rounded-full overflow-hidden ">
+            <div className="bg-[#FFC906] text-[#025450] px-4 py-2 text-sm font-bold">
               VALLUVA'S
             </div>
-            <div className="bg-[#025450] md:text-base  text-white px-4 py-2 text-sm font-bold">
+            <div className="bg-[#025450] text-white px-4 py-2 text-sm font-bold">
               STUDY CENTER LOCATIONS
             </div>
           </div>
-        </div>
-
-
-
-
-        <div className='my-32  flex max-w-[90rem] mx-auto px-10 '>
-          <p className="p-2 col-span-1 text-white bg-[#032E3F] w-fit -rotate-90  text-4xl">VILLUPURAM</p>
-          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3903.551364781132!2d79.4827301757457!3d11.936278536729121!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a53569133712e0d%3A0x901a813cd106dc17!2sValluvas%20Distance%20Education%20Study%20Centre!5e0!3m2!1sen!2sin!4v1727785322194!5m2!1sen!2sin" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 
         </div>
+
+
+        <section className='max-w-[87rem] px-5 mx-auto my-5'>
+          <div className='space-y-5'>
+
+
+            <div className="flex flex-col lg:flex-row bg-white border   overflow-hidden">
+
+              <div className="bg-[#00414F] text-white flex justify-center items-center lg:w-[0%] p-4">
+                <h2 className="text-2xl font-bold tracking-widest transform  lg:-rotate-90">VILLUPURAM</h2>
+              </div>
+
+
+              <div className="flex flex-col lg:flex-row w-full">
+
+                <div className="w-full lg:w-[70%] p-4">
+                  <iframe
+                    className="w-full h-64 lg:h-full rounded-lg"
+                   src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4843.851949796941!2d79.48278327587788!3d11.936726836719792!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a53569133712e0d%3A0x901a813cd106dc17!2sValluvas%20Distance%20Education%20Study%20Centre!5e1!3m2!1sen!2sin!4v1727850169262!5m2!1sen!2sin"
+                    allowFullScreen=""
+                    loading="lazy"
+                    title="Location Map"
+                  ></iframe>
+                </div>
+
+                <div className="w-full lg:w-[30%] p-6 flex flex-col  justify-center lg:space-y-16 space-y-5">
+
+                  <div className="flex items-center">
+                    <img
+                      src="/assets/Images/Footer/Location (2).png"
+                      alt="Location Icon"
+                      className="w-6 h-6 mr-3"
+                    />
+                    <p className=" md:text-lg text-sm text-gray-800">
+                      No. 24, Trichy Main Road, 1st Floor, <br />
+                      Es. Hospital Opp., Villupuram – 605602
+                    </p>
+                  </div>
+
+
+                  <div className="flex items-center">
+                    <img
+                      src="/assets/Images/Footer/Ringer Volume (2).png"
+                      alt="Phone Icon"
+                      className="w-6 h-6 mr-3"
+                    />
+                    <p className=" md:text-lg text-sm text-gray-800">
+                      +91 7010051075, +91 4146 355730
+                    </p>
+                  </div>
+
+                  <div className="flex items-center">
+                    <img
+                      src="/assets/Images/Footer/Letter (1).png"
+                      alt="Email Icon"
+                      className="w-6 h-6 mr-3"
+                    />
+                    <p className=" md:text-lg text-sm text-gray-800">
+                      Valluvasvpm@Gmail.Com
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+
+            <div className="flex flex-col lg:flex-row bg-white border   overflow-hidden">
+
+              <div className="bg-[#00414F] text-white flex justify-center items-center lg:w-[0%] p-4">
+                <h2 className="text-2xl font-bold tracking-widest transform  lg:-rotate-90">TINDIVANAM</h2>
+              </div>
+
+
+              <div className="flex flex-col lg:flex-row w-full">
+
+                <div className="w-full lg:w-[70%] p-4">
+                  <iframe
+                    className="w-full h-64 lg:h-full rounded-lg"
+                   src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4843.851949796941!2d79.48278327587788!3d11.936726836719792!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a53569133712e0d%3A0x901a813cd106dc17!2sValluvas%20Distance%20Education%20Study%20Centre!5e1!3m2!1sen!2sin!4v1727850169262!5m2!1sen!2sin"
+                    allowFullScreen=""
+                    loading="lazy"
+                    title="Location Map"
+                  ></iframe>
+                </div>
+
+                <div className="w-full lg:w-[30%] p-6 flex flex-col  justify-center lg:space-y-16 space-y-5">
+
+                  <div className="flex items-center">
+                    <img
+                      src="/assets/Images/Footer/Location (2).png"
+                      alt="Location Icon"
+                      className="w-6 h-6 mr-3"
+                    />
+                    <p className=" md:text-lg text-sm text-gray-800">
+                      Tindivanam Main Road,
+                      Tindivanam – 604001
+                    </p>
+                  </div>
+
+
+                  <div className="flex items-center">
+                    <img
+                      src="/assets/Images/Footer/Ringer Volume (2).png"
+                      alt="Phone Icon"
+                      className="w-6 h-6 mr-3"
+                    />
+                    <p className=" md:text-lg text-sm text-gray-800">
+                      +91 7010051075, +91 4146 355730
+                    </p>
+                  </div>
+
+                  <div className="flex items-center">
+                    <img
+                      src="/assets/Images/Footer/Letter (1).png"
+                      alt="Email Icon"
+                      className="w-6 h-6 mr-3"
+                    />
+                    <p className=" md:text-lg text-sm text-gray-800">
+                      info@valluvasedu.com
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+
+            <div className="flex flex-col lg:flex-row bg-white border   overflow-hidden">
+
+              <div className="bg-[#00414F] text-white flex justify-center items-center lg:w-[0%] p-4">
+                <h2 className="text-2xl font-bold tracking-widest transform  lg:-rotate-90">THIRUKOVILUR</h2>
+              </div>
+
+
+              <div className="flex flex-col lg:flex-row w-full">
+
+                <div className="w-full lg:w-[70%] p-4">
+                  <iframe
+                    className="w-full h-64 lg:h-full rounded-lg"
+                      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4843.851949796941!2d79.48278327587788!3d11.936726836719792!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a53569133712e0d%3A0x901a813cd106dc17!2sValluvas%20Distance%20Education%20Study%20Centre!5e1!3m2!1sen!2sin!4v1727850169262!5m2!1sen!2sin"
+                    allowFullScreen=""
+                    loading="lazy"
+                    title="Location Map"
+                  ></iframe>
+                </div>
+
+                <div className="w-full lg:w-[30%] p-6 flex flex-col  justify-center lg:space-y-16 space-y-5">
+
+                  <div className="flex items-center">
+                    <img
+                      src="/assets/Images/Footer/Location (2).png"
+                      alt="Location Icon"
+                      className="w-6 h-6 mr-3"
+                    />
+                    <p className=" md:text-lg text-sm text-gray-800">
+                      Thirukovilur Mian Road,
+                      Thirukovilur – 605757
+                    </p>
+                  </div>
+
+
+                  <div className="flex items-center">
+                    <img
+                      src="/assets/Images/Footer/Ringer Volume (2).png"
+                      alt="Phone Icon"
+                      className="w-6 h-6 mr-3"
+                    />
+                    <p className=" md:text-lg text-sm text-gray-800">
+                      +91 7010051075, +91 4146 355730
+                    </p>
+                  </div>
+
+                  <div className="flex items-center">
+                    <img
+                      src="/assets/Images/Footer/Letter (1).png"
+                      alt="Email Icon"
+                      className="w-6 h-6 mr-3"
+                    />
+                    <p className=" md:text-lg text-sm text-gray-800">
+                      Valluvasvpm@Gmail.Com
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </section>
       </section>
-
-
- */}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
       <div className='my-5'>
-
+   
 
         <p className="text-center text-[#025450] md:text-xl mb-3 ">Get In Touch</p>
-        <div className="flex justify-center">
+        <div className="flex justify-center md:px-0 px-5">
           <div className="inline-flex items-center rounded-full overflow-hidden">
             <div className="bg-[#FFC906] text-[#025450] px-4 py-2 text-sm font-bold">
               ANY MORE QUESTIONS ?
@@ -129,7 +296,7 @@ function ContactUs() {
                 <div className=''>
 
 
-                  <button className='p-2 px-3 rounded-3xl font-bold   bg-[#FFC906] text-[#025450] '>
+                  <button className='p-2 px-3 rounded-3xl font-bold  hover:bg-white  hover:text-[#FFC906] bg-[#FFC906] text-[#025450] '>
                     Enquiry Now
                   </button>
                 </div>

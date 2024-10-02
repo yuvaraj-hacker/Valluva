@@ -1,10 +1,14 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import Hamburger from "hamburger-react";
 
 function Header() {
   const [isOpen, setOpen] = useState(false);
   const [isVisible, setIsVisible] = useState(false);
+  const location = useLocation(); 
+  const isActive = (path) => location.pathname === path;
+
+
 
 
   const toggleIcons = () => {
@@ -19,7 +23,7 @@ function Header() {
 
 
             <div className="flex items-center">
-              <img src="/assets/Images/Header/Logo 1.png" alt="logo" className='w-20 h-20' />
+              <img src="/assets/Images/Header/Logo 1.png" alt="logo" className='w-20' />
               <p className="text-[#FFC906] ml-2 text-xl font-bold">Valluva's</p>
             </div>
 
@@ -32,7 +36,9 @@ function Header() {
             <div className="text-[#FFC906] lg:block hidden">
               <Link
                 to="/"
-                className="p-3 ps-px sm:px-3 md:py-4 text-sm hover:text-white focus:outline-none focus:text-neutral-300"
+                className={`p-3 ps-px sm:px-3 md:py-4 text-sm hover:text-white focus:outline-none  ${
+                  isActive("/") ? "text-white" : "text-[#FFC906]"
+                }`}
                 aria-current="page"
               >
                 Home
@@ -40,32 +46,33 @@ function Header() {
 
               <Link
                 to="/about"
-                className="p-3 ps-px sm:px-3 md:py-4 text-sm hover:text-white focus:outline-none focus:text-neutral-300"
+                className={`p-3 ps-px sm:px-3 md:py-4 text-sm hover:text-white focus:outline-none  ${isActive("/about") ? "text-white" : "text-[#FFC906]"
+                }`}
               >
                 About Us
               </Link>
 
               <Link
                 to='/course'
-                className="p-3 ps-px sm:px-3 md:py-4 text-sm hover:text-white focus:outline-none focus:text-neutral-300"
+                className={`p-3 ps-px sm:px-3 md:py-4 text-sm hover:text-white focus:outline-none ${isActive("/course") ? "text-white" : "text-[#FFC906]" }`}
 
               >
                 Courses
               </Link>
               <Link
-                className="p-3 ps-px sm:px-3 md:py-4 text-sm hover:text-white focus:outline-none focus:text-neutral-300"
+                className={`p-3 ps-px sm:px-3 md:py-4 text-sm hover:text-white focus:outline-none ${isActive("/admission") ? "text-white" : "text-[#FFC906]" }`}
                 to='/admission'
               >
                 Admission
               </Link>
               <Link
-                className="p-3 ps-px sm:px-3 md:py-4 text-sm hover:text-white focus:outline-none focus:text-neutral-300"
+                className={`p-3 ps-px sm:px-3 md:py-4 text-sm hover:text-white focus:outline-none ${ isActive("/university") ? "text-white" : "text-[#FFC906]"} `}
                 to='/university'
               >
                 Universities
               </Link>
               <Link
-                className="p-3 ps-px sm:px-3 md:py-4 text-sm hover:text-white focus:outline-none focus:text-neutral-300"
+                className={`p-3 ps-px sm:px-3 md:py-4 text-sm hover:text-white focus:outline-none  ${ isActive("/contact") ? "text-white" : "text-[#FFC906]"} `}
                 to='/contact'
               >
                 Contact Us
@@ -129,7 +136,7 @@ function Header() {
           <div className="lg:hidden block bg-[#025450] text-[#FFC906] p-5 text-center border ">
             <Link
               to="/"
-              className="block py-2 text-lg hover:text-white focus:outline-none focus:text-neutral-300 hover:underline"
+              className={`block py-2 text-lg hover:text-white focus:outline-none  hover:underline ${ isActive("/") ? "text-white" : "text-[#FFC906]"} `}
               aria-current="page"
               onClick={() => setOpen(false)}
             >
@@ -138,7 +145,7 @@ function Header() {
 
             <Link
               to="/about"
-              className="block py-2 text-lg hover:text-white focus:outline-none focus:text-neutral-300  hover:underline"
+              className={`block py-2 text-lg hover:text-white focus:outline-none  hover:underline ${ isActive("/about") ? "text-white" : "text-[#FFC906]"} `}
               onClick={() => setOpen(false)}
             >
               About Us
@@ -146,7 +153,7 @@ function Header() {
 
             <Link
               to="/course"
-              className="block py-2 text-lg hover:text-white focus:outline-none focus:text-neutral-300  hover:underline"
+              className={`block py-2 text-lg hover:text-white focus:outline-none  hover:underline ${ isActive("/course") ? "text-white" : "text-[#FFC906]"} `}
               onClick={() => setOpen(false)}
             >
               Courses
@@ -154,7 +161,7 @@ function Header() {
 
             <Link
               to="/admission"
-              className="block py-2 text-lg hover:text-white focus:outline-none focus:text-neutral-300  hover:underline"
+              className={`block py-2 text-lg hover:text-white focus:outline-none  hover:underline ${ isActive("/admission") ? "text-white" : "text-[#FFC906]"} `}
               onClick={() => setOpen(false)}
             >
               Admission
@@ -162,7 +169,7 @@ function Header() {
 
             <Link
               to="/university"
-              className="block py-2 text-lg hover:text-white focus:outline-none focus:text-neutral-300  hover:underline"
+              className={`block py-2 text-lg hover:text-white focus:outline-none  hover:underline ${ isActive("/university") ? "text-white" : "text-[#FFC906]"} `}
               onClick={() => setOpen(false)}
             >
               Universities
@@ -170,7 +177,7 @@ function Header() {
 
             <Link
               to="/contact"
-              className="block py-2 text-lg hover:text-white focus:outline-none focus:text-neutral-300  hover:underline"
+              className={`block py-2 text-lg hover:text-white focus:outline-none  hover:underline ${ isActive("/contact") ? "text-white" : "text-[#FFC906]"} `}
               onClick={() => setOpen(false)}
             >
               Contact Us

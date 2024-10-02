@@ -54,14 +54,14 @@ function Courses() {
 
   return (
     <>
-      <section className="bg-[url('/assets/Images/Header/Group-3.png')]  bg-no-repeat  bg-cover bg-center  h-[20vh] my-8 ">
+      <section className="bg-[url('/assets/Images/Header/Group-3.png')]  bg-no-repeat  bg-cover bg-center  h-[20vh] my-4 ">
         <div className="max-w-[90rem] mx-auto px-10 h-[20vh] items-center grid ">
           <div className="  md:text-5xl text-2xl text-white">Courses</div>
         </div>
       </section>
 
 
-      <section className="max-w-[87rem]  space-y-4 px-5 mx-auto text-center">
+      <section className="max-w-[87rem]  space-y-4 px-5 mx-auto text-center lg:mt-10" >
         <p className="md:text-4xl text-2xl text-[#025450]">Programs that are prepared for the future</p>
         <p className="">Our programs offer complete educational experiences that help students acquire and improve skill sets that may be applied to a variety of career roles.</p>
       </section>
@@ -80,7 +80,7 @@ function Courses() {
           <p className="text-center md:text-4xl text-2xl text-[#025450]">Programmes Offered</p>
           <div className="flex justify-center">
             <div className="inline-flex items-center rounded-full overflow-hidden">
-              <div className="bg-[#FFC906] text-white px-4 py-2 text-sm font-bold">
+              <div className="bg-[#FFC906] text-[#025450] px-4 py-2 text-sm font-bold">
                 UG
               </div>
               <div className="bg-[#025450] text-white px-4 py-2 text-sm font-bold">
@@ -267,7 +267,7 @@ function Courses() {
         
           <div className="flex justify-center">
             <div className="inline-flex items-center rounded-full overflow-hidden">
-              <div className="bg-[#FFC906] text-white px-4 py-2 text-sm font-bold">
+              <div className="bg-[#FFC906] text-[#025450] px-4 py-2 text-sm font-bold">
                 PG
               </div>
               <div className="bg-[#025450] text-white px-4 py-2 text-sm font-bold">
