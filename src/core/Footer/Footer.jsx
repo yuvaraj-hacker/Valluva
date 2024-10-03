@@ -18,7 +18,7 @@ function Footer() {
               <div className=' md:mx-0   mx-auto'>
                 <Link to='/contact'>
 
-                  <button className='p-2 px-3 bg-[#FFC906] text-[#025450] hover:bg-[#025450] hover:text-[#FFC906] rounded-3xl font-bold'>
+                  <button className='p-2 px-3 bg-[#f4e316] text-[#025450] hover:bg-[#025450] hover:text-[#f4e316] rounded-3xl font-bold'>
                     Apply Now
                   </button>
                 </Link>
@@ -35,9 +35,9 @@ function Footer() {
                 <div className="space-y-5 lg:col-span-3">
                   <div className="flex items-center">
                     <img src="/assets/Images/Header/Logo 1.png" alt="Valluva's Logo" className="w-24 h-16" />
-                    <p className="text-[#FFC906] text-2xl font-bold ml-3">Valluva's</p>
+                    <img src="/assets/Images/Header/2.png" alt="logo" className='w-28' />
                   </div>
-                  <p className=''>
+                  <p className='text-justify'>
                     Valluva's (ISO 9001:2015 certified) is a destination for students to search for
                     their demand for quality and recognized academic programs, incepted in 2007.
                     Primarily focuses on assisting working professionals who want to progress through
@@ -64,7 +64,7 @@ function Footer() {
 
 
                 <div className="space-y-5">
-                  <p className="text-[#FFC906] text-lg font-bold">Courses</p>
+                  <p className="text-[#f4e316] text-lg font-bold">Courses</p>
                   <ul className="space-y-2">
                     <div>
 
@@ -74,20 +74,20 @@ function Footer() {
                     </div>
                     <div>
                       <Link to='/course'>
-                   
-                      <li className='hover:underline'>Post Graduate</li>
+
+                        <li className='hover:underline'>Post Graduate</li>
                       </Link>
                     </div>
                     <div>
                       <Link to='/course'>
-                   
-                      <li className='hover:underline'>MBA</li>
+
+                        <li className='hover:underline'>MBA</li>
                       </Link>
                     </div>
                     <div>
                       <Link to='/course'>
-                   
-                      <li className='hover:underline'>Diplomas</li>
+
+                        <li className='hover:underline'>Diploma</li>
                       </Link>
                     </div>
                   </ul>
@@ -95,7 +95,7 @@ function Footer() {
 
 
                 <div className="space-y-5">
-                  <p className="text-[#FFC906] text-lg font-bold">Quick Links</p>
+                  <p className="text-[#f4e316] text-lg font-bold">Quick Links</p>
                   <ul className="space-y-2">
                     <div>
 
@@ -118,13 +118,7 @@ function Footer() {
                     <Link to='/admission'>
                       <li className='hover:underline'>Admission</li>
                     </Link>
-                    <div>
 
-
-                      <Link to='/'>
-                        <li className='hover:underline'>Resources</li>
-                      </Link>
-                    </div>
                     <div>
 
 
@@ -145,24 +139,26 @@ function Footer() {
 
 
                 <div className="space-y-5 lg:col-span-2">
-                  <p className="text-[#FFC906] text-lg font-bold">Contact</p>
+                  <p className="text-[#f4e316] text-lg font-bold">Contact</p>
                   <div className="space-y-2">
                     <div className="flex items-start">
-                      <img className="w-6 h-5" src="/assets/Images/Footer/Location (2).png" alt="Location" />
+                      <img className="w-6 h-5" src="/assets/Images/Contact/locate.png" alt="Location" />
                       <p className="ml-3">
-                        No. 24, Trichy Main Road, 1st Floor, Es. Hospital Opp., Villupuram - 605602.
+                        No. 24, 1 <sup>st</sup> Floor, Trichy Main Road, <br />
+                        Opp. To ES Hospital , <br />
+                        Villupuram - 605602.
                       </p>
                     </div>
                     <div className="flex items-center">
-                      <img className="w-6 h-5" src="/assets/Images/Footer/Ringer Volume (2).png" alt="Phone" />
+                      <img className="w-6 h-5" src="/assets/Images/Contact/Ringer.png" alt="Phone" />
                       <p className="ml-3">+91 7010051075, +91 4146 355730</p>
                     </div>
                     <div className="flex items-center">
-                      <img className="w-6 h-5" src="/assets/Images/Footer/Letter (1).png" alt="Email" />
+                      <img className="w-6 h-5" src="/assets/Images/Contact/Let.png" alt="Email" />
                       <p className="ml-3">valluvasvpm@gmail.com</p>
                     </div>
                     <div className="flex items-center">
-                      <img className="w-6 h-5" src="/assets/Images/Footer/Clock.png" alt="Clock" />
+                      <img className="w-6 h-5" src="/assets/Images/Contact/Cloc.png" alt="Clock" />
                       <p className="ml-3">Monday to Sunday 9:00 am to 07:00 pm</p>
                     </div>
                   </div>
@@ -176,12 +172,12 @@ function Footer() {
       </section>
 
 
-      <div className='bg-[#FFC906] text-center py-5 font-semibold gap-1 flex flex-wrap justify-center md:px-0 px-5'>
+      <div className='bg-[#f4e316] text-center py-5 font-semibold gap-1 flex flex-wrap justify-center md:px-0 px-5'>
         <div className='flex gap-1 text-[#025450]'>
           Copyright © 2024. All Rights Reserved <span className='md:block hidden'>|</span>
         </div>
         <div className='text-[#025450]'>
-          Developed by <span className='text-black hover:underline'><a href='http://arrowthought.com/' target='_blank' rel='noopener noreferrer'>Arrow Thought</a></span>
+          Developed by <span className='text-black hover:underline'><a href='https://thirstycrowz.com/' target='_blank' rel='noopener noreferrer'>Thirsty Crowz</a></span>
         </div>
       </div>
     </>

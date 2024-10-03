@@ -8,6 +8,7 @@ import CoursesPage from "../Components/CoursePage/CoursesPage.jsx";
 import AdmissionPage from "../Components/Admission/AdmissionPage.jsx";
 import UniversityPage from "../Components/UniversityPage/UniversityPage.jsx";
 import ContactPage from "../Components/ContactPage/ContactPage.jsx";
+import Rotate from "../Components/Rotate/Rotate.jsx";
 
 export default function Approuter() {
     return (
@@ -22,6 +23,7 @@ export default function Approuter() {
                         <Route path="/admission" element={<AdmissionPage />} />
                         <Route path="/university" element={<UniversityPage />} />
                         <Route path="/contact" element={<ContactPage />} />
+                        <Route path="/rotate" element={<Rotate />} />
                     </Route >
                 </Routes>
             </BrowserRouter>

@@ -65,26 +65,26 @@ function Aboutt() {
 
       <section className="max-w-[87rem]  px-5  md:my-20 mx-auto">
         <div className="grid lg:grid-cols-5 grid-cols-1  items-center">
-          <div className="col-span-2 bg-[#025450] p-10 rounded-3xl">
-            <div className='flex justify-center flex-col md:my-14 my-5 text-white space-y-8 items-center'>
+          <div className="col-span-2 bg-[#025450]  rounded-3xl">
+            <div className='flex justify-center flex-col lg:my-14 my-5 text-white space-y-8 items-center'>
 
-              <div className='text-center'>
+              <div className='text-center space-y-2'>
 
-             
-              <img className='mx-auto' src="/assets/Images/Header/Logo 1.png" alt="" />
-              <p className="text-xl">Best Distance Education Center In Town!</p>
+
+                <img className='mx-auto w-52' src="/assets/Images/About/abb.png" alt="" />
+                <p className="text-2xl">Best Distance Education Center In Town!</p>
               </div>
               <p className="">Your Partner In Academic Growth</p>
               <Link to='/contact'>
-            
-              <p className="underline hover:text-[#FFC906]"> Get In Touch </p>
+
+                <p className="underline hover:text-[#f4e316]"> Get In Touch </p>
               </Link>
             </div>
           </div>
           <div className="col-span-3  border rounded-xl my-5 md:p-10 p-4 space-y-3">
             <p className="text-xl font-bold text-[#025450]">VALUVAS</p>
             <div className="inline-flex items-center rounded-full overflow-hidden">
-              <div className="bg-[#FFC906] text-[#025450] px-4 py-2 text-sm font-bold">
+              <div className="bg-[#f4e316] text-[#025450] px-4 py-2 text-sm font-bold">
                 THE BEST
               </div>
               <div className="bg-[#025450] text-white px-4 py-2 text-sm font-bold">
@@ -121,7 +121,7 @@ function Aboutt() {
             <Link to='/course'>
 
               <div className="text-end">
-                <button className="border rounded-2xl font-semibold md:text-base text-sm bg-[#FFC906] hover:text-[#FFC906] hover:bg-[#025450] text-[#025450] p-2 px-3 mt-2">
+                <button className="border rounded-2xl font-semibold md:text-base text-sm bg-[#f4e316] hover:text-[#f4e316] hover:bg-[#025450] text-[#025450] p-2 px-3 mt-2">
                   View Courses
                 </button>
               </div>
@@ -131,25 +131,26 @@ function Aboutt() {
       </section>
 
       <section className="max-w-[87rem]  px-5  mx-auto mb-10 md:my-20 my-5">
-        <div className="text-center my-5 space-y-2">
-          <p className="text-center text-[#025450] text-lg">Message from the</p>
-          <div className="inline-flex items-center rounded-full overflow-hidden">
-            <div className="bg-[#FFC906] text-[#025450] px-4 py-2 text-sm font-bold">
-              DIRECTOR
-            </div>
-            <div className="bg-[#025450] text-white px-4 py-2 text-sm font-bold">
-              DESK
-            </div>
-          </div>
-        </div>
 
-        <div className="grid lg:grid-cols-5 grid-cols-1 gap-10 items-center ">
+
+        <div className="grid lg:grid-cols-5 grid-cols-1 lg:gap-10  ">
           <div className="md:col-span-2 space-y-2 flex flex-col text-center justify-center  ">
             <img className='mx-auto' src="/assets/Images/About/Mask group.png" alt="" />
             <p className="lg:text-3xl font-semibold">G.Senthil Kumaresan</p>
-            <p className="md:text-base text-sm">MBA, M.Phil, MSW, MoM, LLB, (Ph.D)</p>
+            <p className="md:text-base text-sm">MBA, M.Phil, MSW, M.COM, LLB, (Ph.D)</p>
           </div>
           <div className="md:col-span-3 space-y-5">
+            <div className=" my-5 space-y-2    lg:text-left text-center">
+              <p className=" text-[#025450] text-xl font-bold">Message from the</p>
+              <div className="inline-flex items-center rounded-full overflow-hidden">
+                <div className="bg-[#f4e316] text-[#025450] px-4 py-2 text-sm font-bold">
+                  DIRECTOR
+                </div>
+                <div className="bg-[#025450] text-white px-4 py-2 text-sm font-bold">
+                  DESK
+                </div>
+              </div>
+            </div>
             <p className="text-justify md:text-lg text-sm">
               Valluva’s (ISO 9001:2015 certified) is a destination for students
               to search for their demand for quality and recognized academic
@@ -157,7 +158,7 @@ function Aboutt() {
               working professionals who want to progress through educational
               advancement.
             </p>
-            <div className="flex justify-between  flex-wrap items-center">
+            <div className="flex justify-between md:gap-0 gap-3 flex-wrap items-center">
               <div className="flex gap-1 ">
                 <img src="/assets/Images/Footer/Ringer Volume (2).png" alt="" />
                 <p className="">+91 7010051075</p>
@@ -185,7 +186,7 @@ function Aboutt() {
             <p className="text-xl font-bold text-[#025450] text-center">Road to success</p>
             <div className="flex justify-center">
               <div className="inline-flex items-center rounded-full overflow-hidden">
-                <div className="bg-[#FFC906] text-[#025450]e px-4 py-2 text-sm font-bold">
+                <div className="bg-[#f4e316] text-[#025450]e px-4 py-2 text-sm font-bold">
                   THE THREE
                 </div>
                 <div className="bg-[#025450] text-white px-4 py-2 text-sm font-bold">
@@ -276,7 +277,7 @@ function Aboutt() {
         </div>
         <div className="flex justify-center md:px-0 px-5">
           <div className="inline-flex items-center rounded-full overflow-hidden">
-            <div className="bg-[#FFC906] text-[#025450] px-4 py-2 text-sm font-bold">
+            <div className="bg-[#f4e316] text-[#025450] px-4 py-2 text-sm font-bold">
               HAPPY
             </div>
             <div className="bg-[#025450] text-white px-4 py-2 text-sm font-bold">

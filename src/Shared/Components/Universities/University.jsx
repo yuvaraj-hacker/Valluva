@@ -4,6 +4,19 @@ import 'swiper/swiper-bundle.css';
 import 'swiper/css/pagination';
 import { Autoplay, Pagination } from 'swiper/modules';
 import { FaChevronDown, FaChevronUp } from "react-icons/fa";
+import UG from "./UG";
+import PG from "./PG";
+import MBA from "./MBA";
+import MCA from "./MCA";
+import Diploma from "./Diploma";
+import DiplomaCertificate from "./DiplomaCertificate";
+import UGmadras from "./UniversityOfMadras/UGmadras";
+import PGmadras from "./UniversityOfMadras/PGmadras";
+import Certificatemadras from "./UniversityOfMadras/Certificatemadras";
+import Diplomamadras from "./UniversityOfMadras/Diplomamadras";
+import UGalagappa from "./Alagappa/UGalagappa";
+import PGalagappa from "./Alagappa/PGalagappa";
+import MBAalagappa from "./Alagappa/MBAalagappa";
 function University() {
   const [isAccordionOpen, setIsAccordionOpen] = useState(false);
   const toggleAccordion = () => {
@@ -19,104 +32,42 @@ function University() {
     setIsAccordions(!isAccordions);
   };
 
-  const programmes = [
-    "B.A. CRIMINOLOGY & POLICE ADMINISTRATION",
-    "B.A. ECONOMICS",
-    "B.A. ENGLISH",
-    "B.A. FRENCH",
-    "B.A. HISTORICAL STUDIES",
-    "B.A. PUBLIC ADMINISTRATION",
-    "B.A. SOCIOLOGY",
-    "B.A. TAMIL",
-    "B.B.A. BUSINESS ADMINISTRATION",
-    "B.C.A. COMPUTER APPLICATIONS",
-    "B.COM COMPUTER APPLICATIONS",
-    "B.COM. BANK MANAGEMENT",
-    "B.COM. COMMERCE",
-    "B.COM. CORPORATE SECRETARYSHIP",
-    "B.F.A. MUSIC",
-  ];
-
-  const program = [
-    "M.A. SOCIOLOGY",
-    "	M.A. APPLIED SAIVA SIDDHANTHA",
-    "	M.A. CHRISTIAN STUDIES",
-    "	M.A. ECONOMICS",
-    "	M.A. ENGLISH",
-    "	M.A. HISTORICAL STUDIES",
-    "	M.A. HUMAN RIGHTS AND DUTIES EDUCATION",
-
-    "M.A. JOURNALISM",
-    "	M.A. POLITICAL SCIENCE",
-    "M.A. PUBLIC ADMINISTRATION",
-    "M.A. SANSKRIT",
-    "M.A. TAMIL",
-    "M.B.A. FINACIAL MANAGEMENT",
-    "M.B.A. HOSPITAL MANAGEMENT",
-    "	M.B.A. HUMAN RESOURCE MANAGEMENT",
-    "	M.B.A. LOGISTICS & SUPPLY CHAIN MANAGEMENT",
-    "		M.B.A. MARKETING MANAGEMENT",
-    "		M.B.A. SYSTEMS MANAGEMENT",
-    "	M.COM. COMMERCE",
-    "	M.F.A. MUSIC",
-    "		M.SC. COUNSELLING PSYCHOLOGY",
-    "	M.SC. CYBER FORENSICS & INFORMATION SECURITY",
-    "	M.SC. GEOGRAPHY",
-    "	M.SC. INFORMATION TECHNOLOGY (I.T.)",
-    "	M.SC. MATHEMATICS",
-    "		M.SC. PSYCHOLOGY",
-    "		MASTER OF COMPUTER APPLICATION",
-  ];
 
 
 
-  const certificate = [
-    "	Certificate Course in Accounting And Auditing",
-    "	Certificate Course in Computer Applications",
-    "Certificate Course in Corporate Social Responsibility",
-    "Certificate Course in E-Commerce",
-    "	Certificate Course in Indian Christianity",
-    "Certificate Course in Karnatic Music",
-    "Certificate Course in Library And Information Science",
-    "Certificate Course in Management",
-    "	Certificate Course in Naturopathy And Yogic Science",
-    "	Certificate Course in Online Teaching",
-    "Certificate Course in Police Administration",
-    "	Certificate Course in Research Methods Of Social Sciences",
-    "	Certificate Course in Scriptures And Interpretation",
-    "	Certificate Course in Spoken Tamil",
-    "Certificate Course in Taxation",
-    "Certificate Course in Voice Training",
-    "Certificate Course in Written Tamil",
-  ];
+  const [activeIndexes, setActiveIndexes] = useState([]);
+
+  // Function to toggle open/close sections
+  const toggle = (index) => {
+    if (activeIndexes.includes(index)) {
+      // If already open, remove it from activeIndexes (close it)
+      setActiveIndexes(activeIndexes.filter((i) => i !== index));
+    } else {
+      // Otherwise, add the index (open it)
+      setActiveIndexes([...activeIndexes, index]);
+    }
+  };
+
+  const updateScaleEffect = (swiper) => {
+    const slides = swiper.slides;
+    const centerIndex = swiper.activeIndex;
+
+    slides.forEach((slide, index) => {
+      const scale = 1 - Math.abs(centerIndex - index) * 0.1;
+
+      slide.style.transform = `scale(${scale})`;
+
+      slide.style.transition = 'transform 0.3s ease';
+    });
+  };
 
 
 
 
-  const diploma = [
-    "		Diploma Course in Yoga",
-    "	Diploma Course in Logistics And Supply Chain Management",
-    "Diploma Course in Marketing Management",
-    "	Diploma Course in School Management",
-    "	Diploma Course in Systems Management",
-    "	Diploma Course in Taxation",
-    "	Diploma Course In Taxation, Finance, And Investment",
-    "Diploma Course in Teaching Methodology In Music",
-    "		Diploma Course in Tourism & Travel Management",
-    "		Diploma Course in Accounting And Finance",
-    "	Diploma Course in Financial Management",
-    "	Diploma Course in Functional Arabic",
-    "		Diploma Course in Hospital Management",
-    "	Diploma Course in Hotel Management",
-    "	Diploma Course in Human Resource Management",
-    "	Diploma Course in Intellectual Property Rights",
-    "		Diploma Course in Labour Law",
-    "	Diploma Course in Management",
-    "		Diploma Course in Police Administration",
-    "	Diploma in Information Security And Cyber Law",
-    "Diploma in Naturopathy & Yogic Sciences",
 
-  ];
+
+
+
 
   const testimonials = [
     {
@@ -173,8 +124,8 @@ function University() {
         <p className="text-center text-[#025450] md:text-xl mb-3 "></p>
         <div className="flex justify-center md:px-0 px-5">
           <div className="inline-flex items-center rounded-full overflow-hidden">
-            <div className="bg-[#FFC906] text-[#025450] px-4 py-2 text-sm font-bold">
-            INDIA BEST
+            <div className="bg-[#f4e316] text-[#025450] px-4 py-2 text-sm font-bold">
+              INDIA BEST
             </div>
             <div className="bg-[#025450] text-white px-4 py-2 text-sm font-bold">
               UNIVERSITIES
@@ -237,372 +188,95 @@ function University() {
             }`}
         >
           {isAccordionOpen && (
-            <section className="max-w-[80rem] px-5 mx-auto py-10">
-              <h2 className="text-2xl font-bold text-blue-900 mb-5">
-                UG Non-Semester Programmes
-              </h2>
-              <p className="text-sm text-gray-700 mb-2">
-                Duration for B.A, B. Lit, B.Sc, B.B.A, B.Com Programmes: 3 Years
-              </p>
-              <p className="text-sm text-gray-700 mb-6">
-                Duration for B.L.I.S Programme: 1 Year
-              </p>
-              <div className="overflow-x-auto">
-                <table className="min-w-full bg-white border border-gray-300 rounded-lg">
-                  <thead>
-                    <tr className=" border-b">
-                      <th className="py-3 px-4 text-left text-sm font-semibold text-gray-700 border-r">
-                        Sl. No.
-                      </th>
-                      <th className="py-3 px-4 text-left text-sm font-semibold text-gray-700 border-r">
-                        Name of the Programme
-                      </th>
-                      <th className="py-3 px-4 text-left text-sm font-semibold text-gray-700 border-r">
-                        Medium
-                      </th>
-                      <th className="py-3 px-4 text-left text-sm font-semibold text-gray-700">
-                        Eligibility
-                      </th>
-                    </tr>
-                  </thead>
-                  <tbody className="">
-                    <tr className=" ">
-                      <td className="py-2 px-4 text-sm text-gray-600 border-r border-b">1</td>
-                      <td className="py-2 px-4 text-sm text-gray-600 border-r border-b">B.A. Tamil</td>
-                      <td className="py-2 px-4 text-sm text-gray-600 border-r border-b">Tamil</td>
-                      <td className="py-2 px-4 text-sm text-gray-600 " rowSpan={2}>
-                        A pass in 10 + 2 with Tamil as a Language paper for BA Tamil
-                      </td>
-                    </tr>
-                    <tr className="border-b">
-                      <td className="py-2 px-4 text-sm text-gray-600 border-r">2</td>
-                      <td className="py-2 px-4 text-sm text-gray-600 border-r">B.Lit. Tamil</td>
-                      <td className="py-2 px-4 text-sm text-gray-600 border-r">Tamil</td>
-                    </tr>
-                    <tr className="">
-                      <td className="py-2 px-4 text-sm text-gray-600 border-r border-b">3</td>
-                      <td className="py-2 px-4 text-sm text-gray-600 border-r border-b">B.A. Economics</td>
-                      <td className="py-2 px-4 text-sm text-gray-600 border-r border-b">Tamil</td>
-                      <td className="py-2 px-4 text-sm text-gray-600"></td>
-                    </tr>
-                    <tr className="">
-                      <td className="py-2 px-4 text-sm text-gray-600 border-r border-b">4</td>
-                      <td className="py-2 px-4 text-sm text-gray-600 border-r border-b">B.A. English</td>
-                      <td className="py-2 px-4 text-sm text-gray-600 border-r border-b">English</td>
-                      <td className="py-2 px-4 text-sm text-gray-600"></td>
-                    </tr>
-                    <tr className="">
-                      <td className="py-2 px-4 text-sm text-gray-600 border-r border-b">5</td>
-                      <td className="py-2 px-4 text-sm text-gray-600 border-r border-b">B.A. History</td>
-                      <td className="py-2 px-4 text-sm text-gray-600 border-r border-b">Tamil</td>
-                      <td className="py-2 px-4 text-sm text-gray-600">
-                        A pass in Higher Secondary Examination (10+2)
-                      </td>
-                    </tr>
-                    <tr className="">
-                      <td className="py-2 px-4 text-sm text-gray-600 border-r border-b">6</td>
-                      <td className="py-2 px-4 text-sm text-gray-600 border-r border-b">B.A. Public Administration</td>
-                      <td className="py-2 px-4 text-sm text-gray-600 border-r border-b">English</td>
-                      <td className="py-2 px-4 text-sm text-gray-600"></td>
-                    </tr>
-                    <tr className="border-b">
-                      <td className="py-2 px-4 text-sm text-gray-600 border-r">7</td>
-                      <td className="py-2 px-4 text-sm text-gray-600 border-r">B.A. Political Science</td>
-                      <td className="py-2 px-4 text-sm text-gray-600 border-r">English</td>
-                      <td className="py-2 px-4 text-sm text-gray-600"></td>
-                    </tr>
-                    <tr className="">
-                      <td className="py-2 px-4 text-sm text-gray-600 border-r border-b">8</td>
-                      <td className="py-2 px-4 text-sm text-gray-600 border-r border-b">B.B.A.</td>
-                      <td className="py-2 px-4 text-sm text-gray-600 border-r border-b">Tamil & English</td>
-                      <td className="py-2 px-4 text-sm text-gray-600" rowSpan={3}>
-                        Eligibility for B.B.A., B.Com ., B.Com., Computer Applications, B.Com., Bank Management –
-                        A pass in Higher Secondary Examination (10 + 2) with Commerce and Accountancy. 20% of seats may be reserved for Vocational Stream. The candidate who has passed a Diploma in Commerce or Modern Office Practice (3 years) of equivalent awarded by the Directorate of Technical Education / National Council of Vocational Training is eligible for lateral entry to 2nd year
-                      </td>
-                    </tr>
-                    <tr className="">
-                      <td className="py-2 px-4 text-sm text-gray-600 border-r border-b">9</td>
-                      <td className="py-2 px-4 text-sm text-gray-600 border-r border-b">B.Com.</td>
-                      <td className="py-2 px-4 text-sm text-gray-600 border-r border-b">Tamil & English</td>
-                      <td className="py-2 px-4 text-sm text-gray-600">
-                      </td>
-                    </tr>
-                    <tr className="border-b">
-                      <td className="py-2 px-4 text-sm text-gray-600 border-r">10</td>
-                      <td className="py-2 px-4 text-sm text-gray-600 border-r">B.Com. (Bank Management)</td>
-                      <td className="py-2 px-4 text-sm text-gray-600 border-r">English</td>
-                      <td className="py-2 px-4 text-sm text-gray-600"></td>
-                    </tr>
-                    <tr className="border-b">
-                      <td className="py-2 px-4 text-sm text-gray-600 border-r">11</td>
-                      <td className="py-2 px-4 text-sm text-gray-600 border-r">B.Sc.
-                        Mathematics</td>
-                      <td className="py-2 px-4 text-sm text-gray-600 border-r">Tamil & English</td>
-                      <td className="py-2 px-4 text-sm text-gray-600"> A pass in the Higher Secondary Examination (10 + 2) with Mathematics as one of the core subjects.</td>
-                    </tr>
-                    <tr className="border-b">
-                      <td className="py-2 px-4 text-sm text-gray-600 border-r">12</td>
-                      <td className="py-2 px-4 text-sm text-gray-600 border-r">	B.Sc. Chemistry</td>
-                      <td className="py-2 px-4 text-sm text-gray-600 border-r">English</td>
-                      <td className="py-2 px-4 text-sm text-gray-600">A pass in the Higher Secondary Examination (10 + 2) with Chemistry as one of the core subjects.</td>
-                    </tr>
-                    <tr className=" border-b">
-                      <td className="py-2 px-4 text-sm text-gray-600 border-r">13</td>
-                      <td className="py-2 px-4 text-sm text-gray-600 border-r">	B.Sc. Physics</td>
-                      <td className="py-2 px-4 text-sm text-gray-600 border-r">English</td>
-                      <td className="py-2 px-4 text-sm text-gray-600">A pass in the Higher Secondary Examination (10 + 2) with Physics as one of the core subjects.</td>
-                    </tr>
-                    <tr className=" border-b">
-                      <td className="py-2 px-4 text-sm text-gray-600 border-r">14</td>
-                      <td className="py-2 px-4 text-sm text-gray-600 border-r">	B.Sc. Botany</td>
-                      <td className="py-2 px-4 text-sm text-gray-600 border-r">English</td>
-                      <td className="py-2 px-4 text-sm text-gray-600">A pass in Higher Secondary Examination (10 + 2) with Botany or Biology with Chemistry.</td>
-                    </tr>
-                    <tr className=" border-b">
-                      <td className="py-2 px-4 text-sm text-gray-600 border-r">15</td>
-                      <td className="py-2 px-4 text-sm text-gray-600 border-r">	B.Sc. Zoology</td>
-                      <td className="py-2 px-4 text-sm text-gray-600 border-r">English</td>
-                      <td className="py-2 px-4 text-sm text-gray-600">A pass in 10 +2 with Mathematics, Physics, Chemistry and Biology or Physics, Chemistry, Botany and Zoology or Biology as one of the core subjects.</td>
-                    </tr>
-                    <tr className=" border-b">
-                      <td className="py-2 px-4 text-sm text-gray-600 border-r">16</td>
-                      <td className="py-2 px-4 text-sm text-gray-600 border-r">B.Sc.
-                        Geography</td>
-                      <td className="py-2 px-4 text-sm text-gray-600 border-r">English</td>
-                      <td className="py-2 px-4 text-sm text-gray-600">A pass in the Higher Secondary Examination, (10 + 2)</td>
-                    </tr>
-                    <tr>
-                      <td className="py-2 px-4 text-sm text-gray-600 border-r">17</td>
-                      <td className="py-2 px-4 text-sm text-gray-600 border-r">	B.Sc. Computer Science</td>
-                      <td className="py-2 px-4 text-sm text-gray-600 border-r">English</td>
-                      <td className="py-2 px-4 text-sm text-gray-600" rowSpan={2}>A pass in the Higher Secondary Examination (10 + 2) with Computer Science or Mathematics as one of the core subjects.</td>
-                    </tr>
-                    <tr className=" border-b">
-                      <td className="py-2 px-4 text-sm text-gray-600 border-r">18</td>
-                      <td className="py-2 px-4 text-sm text-gray-600 border-r">	B.Sc.
-                        Information Technology</td>
-                      <td className="py-2 px-4 text-sm text-gray-600 border-r">English</td>
-                      <td className="py-2 px-4 text-sm text-gray-600"></td>
-                    </tr>
-                    <tr className=" border-b">
-                      <td className="py-2 px-4 text-sm text-gray-600 border-r">19</td>
-                      <td className="py-2 px-4 text-sm text-gray-600 border-r">	B.C.A.</td>
-                      <td className="py-2 px-4 text-sm text-gray-600 border-r">English</td>
-                      <td className="py-2 px-4 text-sm text-gray-600">	A pass in the Higher Secondary Examination (10 + 2) with Mathematics as one of the core subjects.</td>
-                    </tr>
-                    <tr>
-                      <td className="py-2 px-4 text-sm text-gray-600 border-r">20</td>
-                      <td className="py-2 px-4 text-sm text-gray-600 border-r">	B.Lib.I.Sc.(one year programme)</td>
-                      <td className="py-2 px-4 text-sm text-gray-600 border-r">English</td>
-                      <td className="py-2 px-4 text-sm text-gray-600">A pass in any UG Degree (after 10th and +2)</td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
-              <div className="mt-10">
-                <h2 className="text-2xl font-bold text-blue-900 mb-5">
-                  PG Non-Semester Programmes
-                </h2>
-                <p className="text-sm text-gray-700 mb-2">
-                  Duration for M.A, M.Sc, and M.Com, Programmes: 2 Years
-                </p>
-                <p className="text-sm text-gray-700 mb-6">
-                  Duration for  M.L.I.S Programme: 1 Year
-                </p>
-                <div className="overflow-x-auto">
-                  <table className="min-w-full bg-white border border-gray-300 rounded-lg">
-                    <thead>
-                      <tr className=" border-b">
-                        <th className="py-3 px-4 text-left text-sm font-semibold text-gray-700 border-r">
-                          Sl. No.
-                        </th>
-                        <th className="py-3 px-4 text-left text-sm font-semibold text-gray-700 border-r">
-                          Name of the Programme
-                        </th>
-                        <th className="py-3 px-4 text-left text-sm font-semibold text-gray-700 border-r">
-                          Medium
-                        </th>
-                        <th className="py-3 px-4 text-left text-sm font-semibold text-gray-700">
-                          Eligibility
-                        </th>
-                      </tr>
-                    </thead>
-                    <tbody className="">
-                      <tr className="border-b">
-                        <td className="py-2 px-4 text-sm text-gray-600 border-r border-b">1</td>
-                        <td className="py-2 px-4 text-sm text-gray-600 border-r border-b">M.A. Economics</td>
-                        <td className="py-2 px-4 text-sm text-gray-600 border-r border-b">	English</td>
-                        <td className="py-2 px-4 text-sm text-gray-600 " >
-                          B.A. Economics / Econometrics
-                        </td>
-                      </tr>
-                      <tr className="border-b">
-                        <td className="py-2 px-4 text-sm text-gray-600 border-r">2</td>
-                        <td className="py-2 px-4 text-sm text-gray-600 border-r">	M.A. English</td>
-                        <td className="py-2 px-4 text-sm text-gray-600 border-r">	 English</td>
-                        <td className="py-2 px-4 text-sm text-gray-600 " >
-                          A pass in B.A. English Literature (or) and degree with English as part II Language
-                        </td>
-                      </tr>
-                      <tr className="border-b">
-                        <td className="py-2 px-4 text-sm text-gray-600 border-r border-b">3</td>
-                        <td className="py-2 px-4 text-sm text-gray-600 border-r border-b">	M.A. Tamil</td>
-                        <td className="py-2 px-4 text-sm text-gray-600 border-r border-b">Tamil</td>
-                        <td className="py-2 px-4 text-sm text-gray-600">	A pass in B.A. Tamil / B.Lit. B.A. Applied for Tamil / Pulavar  Degree (or) any Degree with Tamil as part of I language.</td>
-                      </tr>
-                      <tr className="">
-                        <td className="py-2 px-4 text-sm text-gray-600 border-r border-b">4</td>
-                        <td className="py-2 px-4 text-sm text-gray-600 border-r border-b">M.A. History</td>
-                        <td className="py-2 px-4 text-sm text-gray-600 border-r border-b">	Tamil & English</td>
-                        <td className="py-2 px-4 text-sm text-gray-600" rowSpan={3}>Any UG Degree</td>
-                      </tr>
-                      <tr className="">
-                        <td className="py-2 px-4 text-sm text-gray-600 border-r border-b">5</td>
-                        <td className="py-2 px-4 text-sm text-gray-600 border-r border-b">	M.A. Public Administration</td>
-                        <td className="py-2 px-4 text-sm text-gray-600 border-r border-b">	English</td>
-                      </tr>
-                      <tr className="border-b">
-                        <td className="py-2 px-4 text-sm text-gray-600 border-r border-b">6</td>
-                        <td className="py-2 px-4 text-sm text-gray-600 border-r border-b">	M.A. Political Science</td>
-                        <td className="py-2 px-4 text-sm text-gray-600 border-r border-b">English</td>
-                        <td className="py-2 px-4 text-sm text-gray-600"></td>
-                      </tr>
-                      <tr className="border-b">
-                        <td className="py-2 px-4 text-sm text-gray-600 border-r">7</td>
-                        <td className="py-2 px-4 text-sm text-gray-600 border-r">M.Sc. Mathematics</td>
-                        <td className="py-2 px-4 text-sm text-gray-600 border-r">English</td>
-                        <td className="py-2 px-4 text-sm text-gray-600">B.Sc. Mathematics</td>
-                      </tr>
-                      <tr className="border-b">
-                        <td className="py-2 px-4 text-sm text-gray-600 border-r border-b">8</td>
-                        <td className="py-2 px-4 text-sm text-gray-600 border-r border-b">	M.Sc. Chemistry</td>
-                        <td className="py-2 px-4 text-sm text-gray-600 border-r border-b">English</td>
-                        <td className="py-2 px-4 text-sm text-gray-600" >
-                          B.Sc. Chemistry  </td>
-                      </tr>
-                      <tr className="border-b">
-                        <td className="py-2 px-4 text-sm text-gray-600 border-r border-b">9</td>
-                        <td className="py-2 px-4 text-sm text-gray-600 border-r border-b">	M.Sc. Physics</td>
-                        <td className="py-2 px-4 text-sm text-gray-600 border-r border-b"> English</td>
-                        <td className="py-2 px-4 text-sm text-gray-600">
-                          B.Sc. Physics
-                        </td>
-                      </tr>
-                      <tr className="border-b">
-                        <td className="py-2 px-4 text-sm text-gray-600 border-r">10</td>
-                        <td className="py-2 px-4 text-sm text-gray-600 border-r">	M.Sc. Botany</td>
-                        <td className="py-2 px-4 text-sm text-gray-600 border-r">English</td>
-                        <td className="py-2 px-4 text-sm text-gray-600">	B.Sc. Botany</td>
-                      </tr>
-                      <tr className="border-b">
-                        <td className="py-2 px-4 text-sm text-gray-600 border-r">11</td>
-                        <td className="py-2 px-4 text-sm text-gray-600 border-r">	M.Sc. Zoology</td>
-                        <td className="py-2 px-4 text-sm text-gray-600 border-r"> English</td>
-                        <td className="py-2 px-4 text-sm text-gray-600"> 	B.Sc. Zoology</td>
-                      </tr>
-                      <tr >
-                        <td className="py-2 px-4 text-sm text-gray-600 border-r">12</td>
-                        <td className="py-2 px-4 text-sm text-gray-600 border-r">	M.Sc. Computer Science</td>
-                        <td className="py-2 px-4 text-sm text-gray-600 border-r">English</td>
-                        <td className="py-2 px-4 text-sm text-gray-600" rowSpan={2}>B.Sc. Computer Science / B.Sc. I.T./B.C.A./Software Development (or) Any other degree equivalent accepted by the Syndicate.</td>
-                      </tr>
-                      <tr className=" border-b">
-                        <td className="py-2 px-4 text-sm text-gray-600 border-r">13</td>
-                        <td className="py-2 px-4 text-sm text-gray-600 border-r">		M.Sc. Information Tech.</td>
-                        <td className="py-2 px-4 text-sm text-gray-600 border-r">English</td>
-                      </tr>
-                      <tr className=" border-b">
-                        <td className="py-2 px-4 text-sm text-gray-600 border-r">14</td>
-                        <td className="py-2 px-4 text-sm text-gray-600 border-r">		M.SC. Geography</td>
-                        <td className="py-2 px-4 text-sm text-gray-600 border-r">English</td>
-                        <td className="py-2 px-4 text-sm text-gray-600">B.Sc., Geography</td>
-                      </tr>
-                    </tbody>
-                  </table>
+
+
+            <section className="max-w-[80rem] px-5 mx-auto py-10 space-y-3">
+
+              <div>
+                <div
+                  className="flex justify-between items-center cursor-pointer md:text-lg text-base font-bold text-blue-900"
+                  onClick={() => toggle(0)}
+                >
+                  UG (NON-SEMESTER PROGRAMMES)
+                  {activeIndexes.includes(0) ? <FaChevronUp /> : <FaChevronDown />}
                 </div>
+                {activeIndexes.includes(0) && (
+                  <UG />
+                )}
               </div>
-              <div className="mt-10">
-                <h2 className="text-2xl font-bold text-blue-900 mb-5">
+
+              <div>
+                <div
+                  className="flex justify-between items-center cursor-pointer md:text-lg text-base font-bold text-blue-900"
+                  onClick={() => toggle(1)}
+                >
+                  PG (NON-SEMESTER PROGRAMMES)
+                  {activeIndexes.includes(1) ? <FaChevronUp /> : <FaChevronDown />}
+                </div>
+                {activeIndexes.includes(1) && (
+                  <PG />
+                )}
+              </div>
+
+
+              <div>
+                <div
+                  className="flex justify-between items-center cursor-pointer md:text-lg text-base font-bold text-blue-900"
+                  onClick={() => toggle(2)}
+                >
                   MBA
-                </h2>
-                <div className="overflow-x-auto">
-                  <table className="min-w-full bg-white border border-gray-300 rounded-lg">
-                    <thead>
-                      <tr className=" border-b">
-                        <th className="py-3 px-4 text-left text-sm font-semibold text-gray-700 border-r">
-                          Sl. No.
-                        </th>
-                        <th className="py-3 px-4 text-left text-sm font-semibold text-gray-700 border-r">
-                          Name of the Programme
-                        </th>
-                        <th className="py-3 px-4 text-left text-sm font-semibold text-gray-700 border-r">
-                          Medium
-                        </th>
-                        <th className="py-3 px-4 text-left text-sm font-semibold text-gray-700">
-                          Eligibility
-                        </th>
-                      </tr>
-                    </thead>
-                    <tbody className="">
-                      <tr className="border-b">
-                        <td className="py-2 px-4 text-sm text-gray-600 border-r border-b">1</td>
-                        <td className="py-2 px-4 text-sm text-gray-600 border-r border-b">	M.B.A.</td>
-                        <td className="py-2 px-4 text-sm text-gray-600 border-r border-b">	English</td>
-                        <td className="py-2 px-4 text-sm text-gray-600 " >
-                          Any UG Degree of this University or an equivalent examination accepted by the Syndicate thereto (10 + 2 + 3) including B.E./B.Tech. with a minimum of 50% marks in Part III
-                        </td>
-                      </tr>
-                    </tbody>
-                  </table>
+                  {activeIndexes.includes(2) ? <FaChevronUp /> : <FaChevronDown />}
                 </div>
+                {activeIndexes.includes(2) && (
+                  <MBA />
+                )}
               </div>
-              <div className="mt-10">
-                <h2 className="text-2xl font-bold text-blue-900 mb-5">
-                  Diploma / Certificate Programmes
-                </h2>
-                <div className="overflow-x-auto">
-                  <table className="min-w-full bg-white border border-gray-300 rounded-lg">
-                    <thead>
-                      <tr className=" border-b">
-                        <th className="py-3 px-4 text-left text-sm font-semibold text-gray-700 border-r">
-                          Sl. No.
-                        </th>
-                        <th className="py-3 px-4 text-left text-sm font-semibold text-gray-700 border-r">
-                          Name of the Programme
-                        </th>
-                        <th className="py-3 px-4 text-left text-sm font-semibold text-gray-700 border-r">
-                          Duration
-                        </th>
-                        <th className="py-3 px-4 text-left text-sm font-semibold text-gray-700">
-                          Eligibility
-                        </th>
-                      </tr>
-                    </thead>
-                    <tbody className="">
-                      <tr className="border-b">
-                        <td className="py-2 px-4 text-sm text-gray-600 border-r border-b">1</td>
-                        <td className="py-2 px-4 text-sm text-gray-600 border-r border-b">		Diploma in Thirukkural</td>
-                        <td className="py-2 px-4 text-sm text-gray-600 border-r border-b">1 year</td>
-                        <td className="py-2 px-4 text-sm text-gray-600 " rowSpan={2} >
-                          A pass in SSLC Examination (10th ).                              </td>
-                      </tr>
-                      <tr className="border-b">
-                        <td className="py-2 px-4 text-sm text-gray-600 border-r border-b">1</td>
-                        <td className="py-2 px-4 text-sm text-gray-600 border-r border-b">		Diploma in Sanskrit</td>
-                        <td className="py-2 px-4 text-sm text-gray-600 border-r border-b">	1 year</td>
-                      </tr>
-                      <tr className="border-b">
-                        <td className="py-2 px-4 text-sm text-gray-600 border-r border-b">1</td>
-                        <td className="py-2 px-4 text-sm text-gray-600 border-r border-b">	Certificate Course in Tamil Pandit Training.</td>
-                        <td className="py-2 px-4 text-sm text-gray-600 border-r border-b">	1 year</td>
-                        <td className="py-2 px-4 text-sm text-gray-600 " >
-                          A pass in Pulavar / B.Litt Tamil                              </td>
-                      </tr>
-                    </tbody>
-                  </table>
+
+
+              <div>
+                <div
+                  className="flex justify-between items-center cursor-pointer md:text-lg text-base font-bold text-blue-900"
+                  onClick={() => toggle(3)}
+                >
+                  MCA
+                  {activeIndexes.includes(3) ? <FaChevronUp /> : <FaChevronDown />}
                 </div>
+                {activeIndexes.includes(3) && (
+                  <MCA />
+                )}
+              </div>
+
+              <div>
+                <div
+                  className="flex justify-between items-center cursor-pointer md:text-lg text-base font-bold text-blue-900"
+                  onClick={() => toggle(4)}
+                >
+                  DIPLOMA PROGRAMMES
+                  {activeIndexes.includes(4) ? <FaChevronUp /> : <FaChevronDown />}
+                </div>
+                {activeIndexes.includes(4) && (
+                  <Diploma />
+                )}
+              </div>
+
+
+              <div>
+                <div
+                  className="flex justify-between items-center cursor-pointer md:text-lg text-base font-bold text-blue-900"
+                  onClick={() => toggle(5)}
+                >
+                  DIPLOMA & CERTIFICATE PROGRAMMES
+                  {activeIndexes.includes(5) ? <FaChevronUp /> : <FaChevronDown />}
+                </div>
+                {activeIndexes.includes(5) && (
+                  <DiplomaCertificate />
+                )}
               </div>
             </section>
+
+
+
+
           )}
         </div>
         <section className="max-w-[87rem] px-5 mx-auto">
@@ -653,155 +327,79 @@ function University() {
             }`}
         >
           {isAccordion && (
-            <section className="max-w-[80rem] px-5 mx-auto py-10">
-              <h2 className="text-2xl font-bold text-blue-900 mb-5">
-                UnderGraduate (UG)
-              </h2>
-              <section className="max-w-4xl  ">
-                <div className="overflow-x-auto border border-gray-300 ">
-                  <table className="min-w-full table-auto border-collapse">
-                    <thead className="">
-                      <tr>
-                        <th className="border border-gray-300 px-4 py-3 text-sm font-semibold text-gray-800 text-center">
-                          S.No.
-                        </th>
-                        <th className="border border-gray-300 px-4 py-3 text-sm font-semibold text-gray-800 text-center">
-                          Name of the Undergraduate Programme
-                        </th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      {programmes.map((programme, index) => (
-                        <tr key={index} className="bg-white hover:bg-gray-100">
-                          <td className="border border-gray-300 px-4 py-3 text-sm text-center text-gray-700">
-                            {index + 1}
-                          </td>
-                          <td className="border border-gray-300 px-4 py-3 text-sm text-left text-gray-700">
-                            {programme}
-                          </td>
-                        </tr>
-                      ))}
-                    </tbody>
-                  </table>
+
+
+            <section className="max-w-[80rem] px-5 mx-auto py-10 space-y-3">
+
+
+              <div>
+                <div
+                  className="flex justify-between items-center cursor-pointer md:text-lg text-base font-bold text-blue-900"
+                  onClick={() => toggle(6)}
+                >
+                  UNDERGRADUATE (UG)
+                  {activeIndexes.includes(6) ? <FaChevronUp /> : <FaChevronDown />}
                 </div>
-              </section>
-
-
-              <div className="mt-10">
-                <h2 className="text-2xl font-bold text-blue-900 mb-5">
-                  PostGraduate (PG)
-                </h2>
-                <section className="max-w-4xl  ">
-                  <div className="overflow-x-auto border border-gray-300 ">
-                    <table className="min-w-full table-auto border-collapse">
-                      <thead className="">
-                        <tr>
-                          <th className="border border-gray-300 px-4 py-3 text-sm font-semibold text-gray-800 text-center">
-                            S.No.
-                          </th>
-                          <th className="border border-gray-300 px-4 py-3 text-sm font-semibold text-gray-800 text-center">
-                            Name of the PostGraduate Programme
-                          </th>
-                        </tr>
-                      </thead>
-                      <tbody>
-                        {program.map((programme, index) => (
-                          <tr key={index} className="bg-white hover:bg-gray-100">
-                            <td className="border border-gray-300 px-4 py-3 text-sm text-center text-gray-700">
-                              {index + 1}
-                            </td>
-                            <td className="border border-gray-300 px-4 py-3 text-sm text-left text-gray-700">
-                              {programme}
-                            </td>
-                          </tr>
-                        ))}
-                      </tbody>
-                    </table>
-                  </div>
-                </section>
-
-
+                {activeIndexes.includes(6) && (
+                  <UGmadras />
+                )}
               </div>
 
 
-              <div className="mt-10">
-                <h2 className="text-2xl font-bold text-blue-900 mb-5">
-                  Certificate Course
-                </h2>
-                <section className="max-w-4xl  ">
-                  <div className="overflow-x-auto border border-gray-300 ">
-                    <table className="min-w-full table-auto border-collapse">
-                      <thead className="">
-                        <tr>
-                          <th className="border border-gray-300 px-4 py-3 text-sm font-semibold text-gray-800 text-center">
-                            S.No.
-                          </th>
-                          <th className="border border-gray-300 px-4 py-3 text-sm font-semibold text-gray-800 text-center">
-                            Name of the Certificate and Diploma Programme
-                          </th>
-                        </tr>
-                      </thead>
-                      <tbody>
-                        {certificate.map((programme, index) => (
-                          <tr key={index} className="bg-white hover:bg-gray-100">
-                            <td className="border border-gray-300 px-4 py-3 text-sm text-center text-gray-700">
-                              {index + 1}
-                            </td>
-                            <td className="border border-gray-300 px-4 py-3 text-sm text-left text-gray-700">
-                              {programme}
-                            </td>
-                          </tr>
-                        ))}
-                      </tbody>
-                    </table>
-                  </div>
-                </section>
-
-
+              <div>
+                <div
+                  className="flex justify-between items-center cursor-pointer md:text-lg text-base font-bold text-blue-900"
+                  onClick={() => toggle(7)}
+                >
+                  POSTGRADUATE (PG)
+                  {activeIndexes.includes(7) ? <FaChevronUp /> : <FaChevronDown />}
+                </div>
+                {activeIndexes.includes(7) && (
+                  <PGmadras />
+                )}
               </div>
 
 
-              <div className="mt-10">
-                <h2 className="text-2xl font-bold text-blue-900 mb-5">
-                  Diploma Courses
-                </h2>
-                <section className="max-w-4xl  ">
-                  <div className="overflow-x-auto border border-gray-300 ">
-                    <table className="min-w-full table-auto border-collapse">
-                      <thead className="">
-                        <tr>
-                          <th className="border border-gray-300 px-4 py-3 text-sm font-semibold text-gray-800 text-center">
-                            S.No.
-                          </th>
-                          <th className="border border-gray-300 px-4 py-3 text-sm font-semibold text-gray-800 text-center">
-                            Diploma Course
-                          </th>
-                        </tr>
-                      </thead>
-                      <tbody>
-                        {diploma.map((programme, index) => (
-                          <tr key={index} className="bg-white hover:bg-gray-100">
-                            <td className="border border-gray-300 px-4 py-3 text-sm text-center text-gray-700">
-                              {index + 1}
-                            </td>
-                            <td className="border border-gray-300 px-4 py-3 text-sm text-left text-gray-700">
-                              {programme}
-                            </td>
-                          </tr>
-                        ))}
-                      </tbody>
-                    </table>
-                  </div>
-                </section>
-
-
+              <div>
+                <div
+                  className="flex justify-between items-center cursor-pointer md:text-lg text-base font-bold text-blue-900"
+                  onClick={() => toggle(8)}
+                >
+                  CERTIFICATE COURSE
+                  {activeIndexes.includes(8) ? <FaChevronUp /> : <FaChevronDown />}
+                </div>
+                {activeIndexes.includes(8) && (
+                  <Certificatemadras />
+                )}
               </div>
+
+              <div>
+                <div
+                  className="flex justify-between items-center cursor-pointer md:text-lg text-base font-bold text-blue-900"
+                  onClick={() => toggle(9)}
+                >
+                 DIPLOMA COURSE
+                  {activeIndexes.includes(9) ? <FaChevronUp /> : <FaChevronDown />}
+                </div>
+                {activeIndexes.includes(9) && (
+                  <Diplomamadras />
+                )}
+              </div>
+
+
+
 
 
 
 
 
             </section>
+
+
+
+
+
+
 
 
 
@@ -856,317 +454,53 @@ function University() {
             }`}
         >
           {isAccordions && (
-            <section className="max-w-[80rem] px-5 mx-auto py-10">
-
-              <h2 className="text-3xl font-bold text-blue-900 mb-5">
-                ACADEMIC & PROFESSIONAL PROGRAMMES
-              </h2>
-
-              <h2 className="text-2xl font-bold text-blue-900 mb-5">
-
-                UG Programmes
-              </h2>
-
-              <div className="overflow-x-auto">
-                <table className="min-w-full bg-white border border-gray-300 rounded-lg">
-                  <thead>
-                    <tr className=" border-b">
-                      <th className="py-3 px-4 text-left text-sm font-semibold text-gray-700 border-r">
-                        Sl. No.
-                      </th>
-                      <th className="py-3 px-4 text-left text-sm font-semibold text-gray-700 border-r">
-                        Name of the Programme
-                      </th>
-                      <th className="py-3 px-4 text-left text-sm font-semibold text-gray-700 border-r">
-                        Duration
-                      </th>
-                      <th className="py-3 px-4 text-left text-sm font-semibold text-gray-700">
-                        Eligibility
-                      </th>
-                    </tr>
-                  </thead>
-                  <tbody className="">
-                    <tr className="border-b">
-                      <td className="text-center text-2xl font-bold  text-gray-600" colSpan={4}>ARTS</td>
-                    </tr>
-                    <tr className="border-b">
-                      <td className="py-2 px-4 text-sm text-gray-600 border-r border-b">1</td>
-                      <td className="py-2 px-4 text-sm text-gray-600 border-r border-b">	B.A. (Tamil)</td>
-                      <td className="py-2 px-4 text-sm text-gray-600 border-r border-b">3 Year</td>
-                      <td className="py-2 px-4 text-sm text-gray-600 " >
-                        10 +2 முறையில் 12 தேர்ச்சி பெற்று மற்றும் 10 வகுப்பில் தமிழை ஒரு மொழி பாடமாக பயின்று இருக்க வேண்டும்
-                      </td>
-                    </tr>
-                    <tr className="border-b">
-                      <td className="py-2 px-4 text-sm text-gray-600 border-r">2</td>
-                      <td className="py-2 px-4 text-sm text-gray-600 border-r">B.A. (English)</td>
-                      <td className="py-2 px-4 text-sm text-gray-600 border-r">	3 Year</td>
-                      <td className="py-2 px-4 text-sm text-gray-600 ">	A pass in HSC (or) a 3-year Diploma</td>
-                    </tr>
-                    <tr className="border-b">
-                      <td className="py-2 px-4 text-sm text-gray-600 border-r border-b">3</td>
-                      <td className="py-2 px-4 text-sm text-gray-600 border-r border-b">	B.A. (History) *</td>
-                      <td className="py-2 px-4 text-sm text-gray-600 border-r border-b">3 Year</td>
-                      <td className="py-2 px-4 text-sm text-gray-600">A pass in HSC (or) a 3-year Diploma</td>
-                    </tr>
-                    <tr className="border-b">
-                      <td className="py-2 px-4 text-sm text-gray-600 border-r border-b">4</td>
-                      <td className="py-2 px-4 text-sm text-gray-600 border-r border-b">B.A.(Economics) *</td>
-                      <td className="py-2 px-4 text-sm text-gray-600 border-r border-b">3 Year</td>
-                      <td className="py-2 px-4 text-sm text-gray-600">A pass in HSC (or) a 3-year Diploma</td>
-                    </tr>
-                    <tr className="border-b">
-                      <td className="py-2 px-4 text-sm text-gray-600 border-r border-b">5</td>
-                      <td className="py-2 px-4 text-sm text-gray-600 border-r border-b">B.A. (Public Administration)</td>
-                      <td className="py-2 px-4 text-sm text-gray-600 border-r border-b">3 Year</td>
-                      <td className="py-2 px-4 text-sm text-gray-600">
-                        A pass in HSC (or) a 3-year Diploma
-                      </td>
-                    </tr>
-
-                    <tr className="border-b">
-                      <td className="text-center text-2xl font-bold  text-gray-600" colSpan={4}>SCIENCE</td>
-                    </tr>
-                    <tr className="border-b">
-                      <td className="py-2 px-4 text-sm text-gray-600 border-r border-b">6</td>
-                      <td className="py-2 px-4 text-sm text-gray-600 border-r border-b">B.Sc. (Mathematics)</td>
-                      <td className="py-2 px-4 text-sm text-gray-600 border-r border-b">3 Year</td>
-                      <td className="py-2 px-4 text-sm text-gray-600">A pass in HSC (or) a 3-year Diploma in Mathematics</td>
-                    </tr>
-                    <tr className="border-b">
-                      <td className="py-2 px-4 text-sm text-gray-600 border-r">7</td>
-                      <td className="py-2 px-4 text-sm text-gray-600 border-r">B.Sc.(Information Technology)</td>
-                      <td className="py-2 px-4 text-sm text-gray-600 border-r">3 Year</td>
-                      <td className="py-2 px-4 text-sm text-gray-600">A pass in HSC (or) a 3-year Diploma</td>
-                    </tr>
-                    <tr className="border-b">
-                      <td className="py-2 px-4 text-sm text-gray-600 border-r border-b">8</td>
-                      <td className="py-2 px-4 text-sm text-gray-600 border-r border-b">	B.Sc.(Computer Science)</td>
-                      <td className="py-2 px-4 text-sm text-gray-600 border-r border-b">3 Year</td>
-                      <td className="py-2 px-4 text-sm text-gray-600" >
-                        A pass in HSC (or) a 3-year Diploma
-                      </td>
-                    </tr>
-                    <tr className="border-b">
-                      <td className="py-2 px-4 text-sm text-gray-600 border-r border-b">9</td>
-                      <td className="py-2 px-4 text-sm text-gray-600 border-r border-b">	Bachelor of Computer Applications (BCA)</td>
-                      <td className="py-2 px-4 text-sm text-gray-600 border-r border-b">3 Year</td>
-                      <td className="py-2 px-4 text-sm text-gray-600">A pass in HSC (or) a 3-year Diploma
-                      </td>
-                    </tr>
-                    <tr className="border-b">
-                      <td className="py-2 px-4 text-sm text-gray-600 border-r">10</td>
-                      <td className="py-2 px-4 text-sm text-gray-600 border-r">B.Sc. (Psychology)</td>
-                      <td className="py-2 px-4 text-sm text-gray-600 border-r">3 Year</td>
-                      <td className="py-2 px-4 text-sm text-gray-600">A pass in HSC (or) a 3-year Diploma</td>
-                    </tr>
-                    <tr className="border-b">
-                      <td className="text-center text-2xl font-bold  text-gray-600" colSpan={4}>MANAGEMENT</td>
-                    </tr>
-                    <tr className="border-b">
-                      <td className="py-2 px-4 text-sm text-gray-600 border-r">11</td>
-                      <td className="py-2 px-4 text-sm text-gray-600 border-r">	B.Com*</td>
-                      <td className="py-2 px-4 text-sm text-gray-600 border-r">3 Year</td>
-                      <td className="py-2 px-4 text-sm text-gray-600">	A pass in HSC (or) a 3-year Diploma</td>
-                    </tr>
-                    <tr className="border-b">
-                      <td className="py-2 px-4 text-sm text-gray-600 border-r">12</td>
-                      <td className="py-2 px-4 text-sm text-gray-600 border-r">	B.B.A*</td>
-                      <td className="py-2 px-4 text-sm text-gray-600 border-r">3 Year</td>
-                      <td className="py-2 px-4 text-sm text-gray-600">	A pass in HSC (or) a 3-year Diploma</td>
-                    </tr>
-                    <tr className=" border-b">
-                      <td className="py-2 px-4 text-sm text-gray-600 border-r">13</td>
-                      <td className="py-2 px-4 text-sm text-gray-600 border-r">B.B.A. (Banking)</td>
-                      <td className="py-2 px-4 text-sm text-gray-600 border-r">3 Year</td>
-                      <td className="py-2 px-4 text-sm text-gray-600">	A pass in HSC (or) a 3-year Diploma</td>
-                    </tr>
-                    <tr className=" border-b">
-                      <td className="py-2 px-4 text-sm text-gray-600 border-r">14</td>
-                      <td className="py-2 px-4 text-sm text-gray-600 border-r">	B.Com. (Computer Applications)</td>
-                      <td className="py-2 px-4 text-sm text-gray-600 border-r">3 Year</td>
-                      <td className="py-2 px-4 text-sm text-gray-600">	A pass in HSC (or) a 3-year Diploma</td>
-                    </tr>
-                    <tr className="border-b ">
-                      <td className="text-center text-2xl font-bold  text-gray-600 " colSpan={4}>LIBRARY SCIENCE</td>
-                    </tr>
-                    <tr className=" border-b">
-                      <td className="py-2 px-4 text-sm text-gray-600 border-r">15</td>
-                      <td className="py-2 px-4 text-sm text-gray-600 border-r">	Bachelor of Library and Information Science (B.Lib.I.Sc.)</td>
-                      <td className="py-2 px-4 text-sm text-gray-600 border-r">1 Year</td>
-                      <td className="py-2 px-4 text-sm text-gray-600">Any Bachelor Degree from a recognized University</td>
-                    </tr>
-                    <tr className=" border-b">
-                      <td className="py-2 px-4 text-sm text-gray-600 border-r">16</td>
-                      <td className="py-2 px-4 text-sm text-gray-600 border-r">		B.Ed.,</td>
-                      <td className="py-2 px-4 text-sm text-gray-600 border-r">2 Year</td>
-                      <td className="py-2 px-4 text-sm text-gray-600">	10+2+3 or 11+1+3 pattern + D.T.Ed. /D.P.Ed./B…P.Ed. /M.P.Ed + Trained in-service teachers</td>
-                    </tr>
-                  </tbody>
-                </table>
-                <div className="space-y-3 my-4">
 
 
-                  <p className="">    * Both English and Tamil Medium</p>
-                  <p className="">
-                    # Tamil Medium Only</p>
+            <section className="max-w-[80rem] px-5 mx-auto py-10 space-y-3">
+
+
+              <div>
+                <div
+                  className="flex justify-between items-center cursor-pointer md:text-lg text-base font-bold text-blue-900"
+                  onClick={() => toggle(10)}
+                >
+                  UG PROGRAMMES
+                  {activeIndexes.includes(10) ? <FaChevronUp /> : <FaChevronDown />}
                 </div>
+                {activeIndexes.includes(10) && (
+                  <UGalagappa />
+                )}
               </div>
-              <div className="mt-10">
-                <h2 className="text-2xl font-bold text-blue-900 mb-5">
-                  PG Programmes
 
-                </h2>
-
-                <div className="overflow-x-auto">
-                  <table className="min-w-full bg-white border border-gray-300 rounded-lg">
-                    <thead>
-                      <tr className=" border-b">
-                        <th className="py-3 px-4 text-left text-sm font-semibold text-gray-700 border-r">
-                          Sl. No.
-                        </th>
-                        <th className="py-3 px-4 text-left text-sm font-semibold text-gray-700 border-r">
-                          Name of the Programme
-                        </th>
-                        <th className="py-3 px-4 text-left text-sm font-semibold text-gray-700 border-r">
-                          Medium
-                        </th>
-                        <th className="py-3 px-4 text-left text-sm font-semibold text-gray-700">
-                          Eligibility
-                        </th>
-                      </tr>
-                    </thead>
-                    <tbody className="">
-                      <tr className="border-b">
-                        <td className="py-2 px-4 text-sm text-gray-600 border-r border-b">1</td>
-                        <td className="py-2 px-4 text-sm text-gray-600 border-r border-b">M.A. Economics</td>
-                        <td className="py-2 px-4 text-sm text-gray-600 border-r border-b">	English</td>
-                        <td className="py-2 px-4 text-sm text-gray-600 " >
-                          B.A. Economics / Econometrics
-                        </td>
-                      </tr>
-                      <tr className="border-b">
-                        <td className="py-2 px-4 text-sm text-gray-600 border-r">2</td>
-                        <td className="py-2 px-4 text-sm text-gray-600 border-r">	M.A. English</td>
-                        <td className="py-2 px-4 text-sm text-gray-600 border-r">	 English</td>
-                        <td className="py-2 px-4 text-sm text-gray-600 " >
-                          A pass in B.A. English Literature (or) and degree with English as part II Language
-                        </td>
-                      </tr>
-                      <tr className="border-b">
-                        <td className="py-2 px-4 text-sm text-gray-600 border-r border-b">3</td>
-                        <td className="py-2 px-4 text-sm text-gray-600 border-r border-b">	M.A. Tamil</td>
-                        <td className="py-2 px-4 text-sm text-gray-600 border-r border-b">Tamil</td>
-                        <td className="py-2 px-4 text-sm text-gray-600">	A pass in B.A. Tamil / B.Lit. B.A. Applied for Tamil / Pulavar  Degree (or) any Degree with Tamil as part of I language.</td>
-                      </tr>
-                      <tr className="">
-                        <td className="py-2 px-4 text-sm text-gray-600 border-r border-b">4</td>
-                        <td className="py-2 px-4 text-sm text-gray-600 border-r border-b">M.A. History</td>
-                        <td className="py-2 px-4 text-sm text-gray-600 border-r border-b">	Tamil & English</td>
-                        <td className="py-2 px-4 text-sm text-gray-600" rowSpan={3}>Any UG Degree</td>
-                      </tr>
-                      <tr className="">
-                        <td className="py-2 px-4 text-sm text-gray-600 border-r border-b">5</td>
-                        <td className="py-2 px-4 text-sm text-gray-600 border-r border-b">	M.A. Public Administration</td>
-                        <td className="py-2 px-4 text-sm text-gray-600 border-r border-b">	English</td>
-                      </tr>
-                      <tr className="border-b">
-                        <td className="py-2 px-4 text-sm text-gray-600 border-r border-b">6</td>
-                        <td className="py-2 px-4 text-sm text-gray-600 border-r border-b">	M.A. Political Science</td>
-                        <td className="py-2 px-4 text-sm text-gray-600 border-r border-b">English</td>
-                        <td className="py-2 px-4 text-sm text-gray-600"></td>
-                      </tr>
-                      <tr className="border-b">
-                        <td className="py-2 px-4 text-sm text-gray-600 border-r">7</td>
-                        <td className="py-2 px-4 text-sm text-gray-600 border-r">M.Sc. Mathematics</td>
-                        <td className="py-2 px-4 text-sm text-gray-600 border-r">English</td>
-                        <td className="py-2 px-4 text-sm text-gray-600">B.Sc. Mathematics</td>
-                      </tr>
-                      <tr className="border-b">
-                        <td className="py-2 px-4 text-sm text-gray-600 border-r border-b">8</td>
-                        <td className="py-2 px-4 text-sm text-gray-600 border-r border-b">	M.Sc. Chemistry</td>
-                        <td className="py-2 px-4 text-sm text-gray-600 border-r border-b">English</td>
-                        <td className="py-2 px-4 text-sm text-gray-600" >
-                          B.Sc. Chemistry  </td>
-                      </tr>
-                      <tr className="border-b">
-                        <td className="py-2 px-4 text-sm text-gray-600 border-r border-b">9</td>
-                        <td className="py-2 px-4 text-sm text-gray-600 border-r border-b">	M.Sc. Physics</td>
-                        <td className="py-2 px-4 text-sm text-gray-600 border-r border-b"> English</td>
-                        <td className="py-2 px-4 text-sm text-gray-600">
-                          B.Sc. Physics
-                        </td>
-                      </tr>
-                      <tr className="border-b">
-                        <td className="py-2 px-4 text-sm text-gray-600 border-r">10</td>
-                        <td className="py-2 px-4 text-sm text-gray-600 border-r">	M.Sc. Botany</td>
-                        <td className="py-2 px-4 text-sm text-gray-600 border-r">English</td>
-                        <td className="py-2 px-4 text-sm text-gray-600">	B.Sc. Botany</td>
-                      </tr>
-                      <tr className="border-b">
-                        <td className="py-2 px-4 text-sm text-gray-600 border-r">11</td>
-                        <td className="py-2 px-4 text-sm text-gray-600 border-r">	M.Sc. Zoology</td>
-                        <td className="py-2 px-4 text-sm text-gray-600 border-r"> English</td>
-                        <td className="py-2 px-4 text-sm text-gray-600"> 	B.Sc. Zoology</td>
-                      </tr>
-                      <tr >
-                        <td className="py-2 px-4 text-sm text-gray-600 border-r">12</td>
-                        <td className="py-2 px-4 text-sm text-gray-600 border-r">	M.Sc. Computer Science</td>
-                        <td className="py-2 px-4 text-sm text-gray-600 border-r">English</td>
-                        <td className="py-2 px-4 text-sm text-gray-600" rowSpan={2}>B.Sc. Computer Science / B.Sc. I.T./B.C.A./Software Development (or) Any other degree equivalent accepted by the Syndicate.</td>
-                      </tr>
-                      <tr className=" border-b">
-                        <td className="py-2 px-4 text-sm text-gray-600 border-r">13</td>
-                        <td className="py-2 px-4 text-sm text-gray-600 border-r">		M.Sc. Information Tech.</td>
-                        <td className="py-2 px-4 text-sm text-gray-600 border-r">English</td>
-                      </tr>
-                      <tr className=" border-b">
-                        <td className="py-2 px-4 text-sm text-gray-600 border-r">14</td>
-                        <td className="py-2 px-4 text-sm text-gray-600 border-r">		M.SC. Geography</td>
-                        <td className="py-2 px-4 text-sm text-gray-600 border-r">English</td>
-                        <td className="py-2 px-4 text-sm text-gray-600">B.Sc., Geography</td>
-                      </tr>
-                    </tbody>
-                  </table>
+              <div>
+                <div
+                  className="flex justify-between items-center cursor-pointer md:text-lg text-base font-bold text-blue-900"
+                  onClick={() => toggle(11)}
+                >
+                  PG PROGRAMMES
+                  {activeIndexes.includes(11) ? <FaChevronUp /> : <FaChevronDown />}
                 </div>
+                {activeIndexes.includes(11) && (
+                  <PGalagappa />
+                )}
               </div>
-              <div className="mt-10">
-                <h2 className="text-2xl font-bold text-blue-900 mb-5">
+
+
+
+              <div>
+                <div
+                  className="flex justify-between items-center cursor-pointer md:text-lg text-base font-bold text-blue-900"
+                  onClick={() => toggle(12)}
+                >
                   MBA
-                </h2>
-                <div className="overflow-x-auto">
-                  <table className="min-w-full bg-white border border-gray-300 rounded-lg">
-                    <thead>
-                      <tr className=" border-b">
-                        <th className="py-3 px-4 text-left text-sm font-semibold text-gray-700 border-r">
-                          Sl. No.
-                        </th>
-                        <th className="py-3 px-4 text-left text-sm font-semibold text-gray-700 border-r">
-                          Name of the Programme
-                        </th>
-                        <th className="py-3 px-4 text-left text-sm font-semibold text-gray-700 border-r">
-                          Medium
-                        </th>
-                        <th className="py-3 px-4 text-left text-sm font-semibold text-gray-700">
-                          Eligibility
-                        </th>
-                      </tr>
-                    </thead>
-                    <tbody className="">
-                      <tr className="border-b">
-                        <td className="py-2 px-4 text-sm text-gray-600 border-r border-b">1</td>
-                        <td className="py-2 px-4 text-sm text-gray-600 border-r border-b">	M.B.A.</td>
-                        <td className="py-2 px-4 text-sm text-gray-600 border-r border-b">	English</td>
-                        <td className="py-2 px-4 text-sm text-gray-600 " >
-                          Any UG Degree of this University or an equivalent examination accepted by the Syndicate thereto (10 + 2 + 3) including B.E./B.Tech. with a minimum of 50% marks in Part III
-                        </td>
-                      </tr>
-                    </tbody>
-                  </table>
+                  {activeIndexes.includes(12) ? <FaChevronUp /> : <FaChevronDown />}
                 </div>
+                {activeIndexes.includes(12) && (
+                  <MBAalagappa />
+                )}
               </div>
-
             </section>
+
           )}
         </div>
 
@@ -1266,10 +600,19 @@ function University() {
         </section>
       </section>
       <section className="max-w-[87rem]  px-5  space-y-5  mx-auto my-20">
-        <div className="w-fit h-fit p-1 rounded-2xl bg-[#FFC906] mx-auto text-black px-5">
+        <div className="w-fit h-fit p-1 rounded-2xl mx-auto text-[#025450]   px-5">
           <p>Hear From Our</p>
         </div>
-        <p className="text-3xl font-bold text-center text-[#025450]">Happy Students</p>
+        <div className="flex justify-center md:px-0 px-5">
+          <div className="inline-flex items-center rounded-full overflow-hidden">
+            <div className="bg-[#f4e316] text-[#025450] px-4 py-2 text-sm font-bold">
+              HAPPY
+            </div>
+            <div className="bg-[#025450] text-white px-4 py-2 text-sm font-bold">
+              STUDENTS
+            </div>
+          </div>
+        </div>
         <div className='my-5 '>
           <Swiper
             spaceBetween={30}
@@ -1286,9 +629,10 @@ function University() {
               768: { slidesPerView: 2 },
               1024: { slidesPerView: 3 },
             }}
+
           >
             {testimonials.map((testimonial, index) => (
-              <SwiperSlide key={index}>
+              <SwiperSlide key={index} >
                 <div className="bg-[#FFF6D3] p-6 shadow-md rounded-lg space-y-4 text-center cursor-pointer">
                   <img
                     className="mx-auto "

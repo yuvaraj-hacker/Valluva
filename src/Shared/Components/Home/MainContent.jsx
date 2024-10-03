@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/swiper-bundle.css';
@@ -6,6 +6,27 @@ import 'swiper/css/pagination';
 import { Autoplay, Pagination } from 'swiper/modules';
 
 function MainContent() {
+
+  const [courseLevel, setCourseLevel] = useState('');
+  const [selectedCourse, setSelectedCourse] = useState('');
+
+
+  const coursesData = {
+    UG: ['	B.A. Tamil', '	B.Lit. Tamil', 'B.A. Economics', 'B.A. English', 'B.A. History', 'B.A. Public Administration', '	B.A. Political Science', '	B.B.A.', '	B.Sc. Mathematics', 'B.Sc. Computer Science'],
+    PG: ['M.A. Economics', 'M.A. English', 'M.A. Tamil', 'M.A. History', '	M.A. Political Science', '	M.A. Public Administration', '		M.Sc. Mathematics', '	M.Sc. Computer  Science', 'M.Com', 'M.B.A'],
+    Diploma: ['Diploma in Computer Science', ''],
+  };
+
+
+  const handleLevelChange = (e) => {
+    setCourseLevel(e.target.value);
+    setSelectedCourse('');
+  };
+
+  const handleCourseChange = (e) => {
+    setSelectedCourse(e.target.value);
+  };
+
 
 
   const testimonials = [
@@ -63,13 +84,13 @@ function MainContent() {
             <p >Learn & Get a Degree from</p>
           </div>
 
-          <p className="md:text-5xl text-2xl text-[#FFC906] text-center font-bold ">Our University Partners</p>
+          <p className="md:text-4xl text-base text-[#f4e316] text-center font-bold bg-[#025450] w-fit mx-auto p-2 rounded-3xl">Our University Partners</p>
         </div>
 
         <div className=' mx-auto mt-10'>
           <div className='grid lg:grid-cols-3  md:grid-cols-2 grid-cols-1 gap-10 my-5 px-5'>
             <Link to='course'>
-              <div className='relative border p-2 border-[#FFC906] hover:border-none rounded-xl hover:text-white group hover:bg-[#025450] hover:scale-110 duration-200 hover:cursor-pointer'>
+              <div className='relative border p-2 border-[#f4e316] hover:border-none rounded-xl hover:text-white group hover:bg-[#025450] hover:scale-110 duration-200 hover:cursor-pointer'>
 
 
                 <div className='absolute right-0 top-0 h-full'>
@@ -81,7 +102,7 @@ function MainContent() {
 
                 <div className='space-y-2 my-5'>
                   <p className="text-center group-hover:text-white lg:text-xl text-[#025450] font-bold">
-                    Bharathidasan University,<br/> Trichy
+                    Bharathidasan University,<br /> Trichy
                   </p>
                   <p className="text-center group-hover:text-white">
                     B.A, B.Com, BCA, B.Sc, M.A, M.Com, M.B.A, Executive -M.B.A, M.C.A, M.Sc
@@ -98,16 +119,16 @@ function MainContent() {
             </Link>
 
             <Link to='course'>
-              <div className='border relative p-2 border-[#FFC906] hover:border-none rounded-xl hover:text-white group hover:bg-[#025450]  hover:scale-110 duration-200 hover:cursor-pointer'>
+              <div className='border relative p-2 border-[#f4e316] hover:border-none rounded-xl hover:text-white group hover:bg-[#025450]  hover:scale-110 duration-200 hover:cursor-pointer'>
 
-              <div className='absolute right-0 top-0 h-full'>
+                <div className='absolute right-0 top-0 h-full'>
                   <img src="/assets/Images/Header/shadow.png" alt="right-side shadow" className='h-full' />
                 </div>
                 <img className='mx-auto' src="/assets/Images/Header/image (4).png" alt="university1" />
                 <div className='space-y-2 my-5'>
 
 
-                  <p className="text-center text-[#025450] group-hover:text-white lg:text-xl font-bold">Madras University,<br/>
+                  <p className="text-center text-[#025450] group-hover:text-white lg:text-xl font-bold">Madras University,<br />
                     Chennai</p>
                   <p className="text-center group-hover:text-white">B.A, B.Com, B.C.A, B.Sc, M.A, M.Com, M.B.A,
                     Executive -M.B.A, M.C.A, M.Sc</p>
@@ -120,15 +141,15 @@ function MainContent() {
 
             </Link>
             <Link to='/course'>
-              <div className='border relative p-2 border-[#FFC906] rounded-xl hover:border-none hover:text-white group hover:bg-[#025450] hover:scale-110 duration-200 hover:cursor-pointer'>
-              <div className='absolute right-0 top-0 h-full'>
+              <div className='border relative p-2 border-[#f4e316] rounded-xl hover:border-none hover:text-white group hover:bg-[#025450] hover:scale-110 duration-200 hover:cursor-pointer'>
+                <div className='absolute right-0 top-0 h-full'>
                   <img src="/assets/Images/Header/shadow.png" alt="right-side shadow" className='h-full' />
                 </div>
                 <img className='mx-auto' src="/assets/Images/Header/image (5).png" alt="university1" />
                 <div className='space-y-2 my-5'>
 
 
-                  <p className="text-center text-[#025450] lg:text-xl group-hover:text-white font-bold">Alagappa University,<br/>
+                  <p className="text-center text-[#025450] lg:text-xl group-hover:text-white font-bold">Alagappa University,<br />
                     Karaikudiy</p>
                   <p className="text-center group-hover:text-white">B.A, B.Com, B.C.A, B.Sc, M.A, M.Com, M.B.A,
                     Executive -M.B.A, M.C.A, M.Sc</p>
@@ -140,8 +161,8 @@ function MainContent() {
               </div>
             </Link>
             <Link to='/course'>
-              <div className='border relative p-2 border-[#FFC906] rounded-xl hover:border-none hover:text-white group hover:bg-[#025450] hover:scale-110 duration-200 hover:cursor-pointer' >
-              <div className='absolute right-0 top-0 h-full'>
+              <div className='border relative p-2 border-[#f4e316] rounded-xl hover:border-none hover:text-white group hover:bg-[#025450] hover:scale-110 duration-200 hover:cursor-pointer' >
+                <div className='absolute right-0 top-0 h-full'>
                   <img src="/assets/Images/Header/shadow.png" alt="right-side shadow" className='h-full' />
                 </div>
                 <img className='mx-auto' src="/assets/Images/Header/image (6).png" alt="university1" />
@@ -149,7 +170,7 @@ function MainContent() {
 
 
                   <p className="text-center text-[#025450] lg:text-xl group-hover:text-white font-bold">Manonmaniam Sundaranar
-                    University,<br/> Tirunelveli</p>
+                    University,<br /> Tirunelveli</p>
                   <p className="text-center group-hover:text-white">B.A, B.Com, B.C.A, B.Sc, M.A, M.Com, M.B.A,
                     Executive -M.B.A, M.C.A, M.Sc</p>
                 </div>
@@ -160,15 +181,15 @@ function MainContent() {
               </div>
             </Link>
             <Link to='/course'>
-              <div className='border relative p-2 border-[#FFC906] rounded-xl hover:border-none hover:text-white group hover:bg-[#025450] hover:scale-110 duration-200 hover:cursor-pointer'>
-              <div className='absolute right-0 top-0 h-full'>
+              <div className='border relative p-2 border-[#f4e316] rounded-xl hover:border-none hover:text-white group  hover:bg-[#025450] hover:scale-110 duration-200 hover:cursor-pointer'>
+                <div className='absolute right-0 top-0 h-full'>
                   <img src="/assets/Images/Header/shadow.png" alt="right-side shadow" className='h-full' />
                 </div>
                 <img className='mx-auto' src="/assets/Images/Header/image (7).png" alt="university1" />
                 <div className='space-y-2 my-5'>
 
 
-                  <p className="text-center text-[#025450] lg:text-xl group-hover:text-white font-bold">Tamilnadu Open University,<br/>
+                  <p className="text-center text-[#025450] lg:text-xl group-hover:text-white font-bold">Tamilnadu Open University,<br />
                     Chennai</p>
                   <p className="text-center group-hover:text-white">B.A, B.Com, B.C.A, B.Sc, M.A, M.Com, M.B.A,
                     Executive -M.B.A, M.C.A, M.Sc</p>
@@ -180,15 +201,15 @@ function MainContent() {
               </div>
             </Link>
             <Link to='/course'>
-              <div className='border relative p-2 border-[#FFC906] rounded-xl hover:border-none hover:text-white group hover:bg-[#025450] hover:scale-110 duration-200 hover:cursor-pointer'>
-              <div className='absolute right-0 top-0 h-full'>
+              <div className='border relative p-2 border-[#f4e316] rounded-xl hover:border-none hover:text-white group hover:bg-[#025450] hover:scale-110 duration-200 hover:cursor-pointer'>
+                <div className='absolute right-0 top-0 h-full'>
                   <img src="/assets/Images/Header/shadow.png" alt="right-side shadow" className='h-full' />
                 </div>
                 <img className='mx-auto' src="/assets/Images/Header/image (8).png" alt="university1" />
                 <div className='space-y-2 my-5'>
 
 
-                  <p className="text-center text-[#025450]  lg:text-xl group-hover:text-white font-bold">ISBM University,<br/>
+                  <p className="text-center text-[#025450]  lg:text-xl group-hover:text-white font-bold">ISBM University,<br />
                     Chhattisgarh</p>
                   <p className="text-center group-hover:text-white">B.A, B.Com, B.C.A, B.Sc, M.A, M.Com, M.B.A,
                     Executive -M.B.A, M.C.A, M.Sc</p>
@@ -211,7 +232,7 @@ function MainContent() {
 
 
       <section className='max-w-[90rem] mx-auto space-y-5 md:my-20 my-10'>
-        <div className='w-fit h-fit p-1 rounded-2xl bg-[#FFC906] mx-auto text-black px-5'>
+        <div className='w-fit h-fit p-1 rounded-2xl bg-[#f4e316] mx-auto text-black px-5'>
           <p >Why Choose Us</p>
         </div>
 
@@ -233,15 +254,15 @@ function MainContent() {
         <section className='max-w-[60rem] mx-auto md:space-y-5 space-y-3 py-10 px-5'>
 
 
-          <div className='w-fit h-fit p-1 rounded-2xl bg-[#FFC906] mx-auto text-black px-5'>
+          <div className='w-fit h-fit p-1 rounded-2xl bg-[#f4e316] mx-auto text-black px-5'>
             <p >Connect With Us</p>
           </div>
 
 
-          <p className="text-2xl font-bold text-center  text-[#FFC906]  ">Talk To Our Expert</p>
+          <p className="text-2xl font-bold text-center  text-[#f4e316]  ">Talk To Our Expert</p>
           <p className="lg:text-7xl text-2xl font-bold text-center   text-white  ">Admissions Are Open</p>
 
-          <p className='text-center text-xl text-[#FFC906] '>Join Now 2023-24</p>
+          <p className='text-center text-xl text-[#f4e316] '>Join Now 2023-24</p>
           <div className='text-center flex gap-2 justify-center items-center'>
 
             <img src="/assets/Images/Header/WhatsApp.png" alt="" />
@@ -251,7 +272,7 @@ function MainContent() {
             <img src="/assets/Images/Header/Ringer Volume (2).png" alt="" />
             <p className="text-white md:text-base text-sm">+91 7010051075 / 04146 355730</p>
           </div>
-          <p className='text-center text-[#FFC906] md:text-base text-sm'>“Empower your future with expert guidance! Let us, the premier distance education center, be your
+          <p className='text-center text-[#f4e316] md:text-base text-sm'>“Empower your future with expert guidance! Let us, the premier distance education center, be your
             partner in discovering The perfect career path, course, and college for you.”</p>
 
 
@@ -270,7 +291,7 @@ function MainContent() {
           <div className='flex justify-center gap-10 items-center px-5'>
 
 
-            <form className='w-[40rem]  py-5 my-6 rounded-lg bg-[#FFC906] '>
+            <form className='w-[30rem]  py-5 my-6 rounded-lg bg-[#f4e316] '>
               <p className="text-center text-[#025450] md:text-2xl font-bold md:mb-0 mb-3">GET FREE COUNSELING</p>
 
               <div className='px-5 space-y-6 '>
@@ -280,39 +301,78 @@ function MainContent() {
                   <label className=' text-[#025450] '>
                     Name *
                   </label>
-                  <input type="text" placeholder='Enter Full Name' className='w-full p-2 rounded-md' />
+                  <input type="text" placeholder='Enter Full Name' className='w-full p-2 rounded-md' required />
                 </div>
                 <div>
                   <label className=' text-[#025450] '>
                     Mobile No *
                   </label>
-                  <input type="text" placeholder='Enter Your Whatsapp No' className='w-full p-2 rounded-md' />
+                  <input type="text" placeholder='Enter Your Whatsapp No' className='w-full p-2 rounded-md' required />
                 </div>
-                <div>
-                  <label className=' text-[#025450] '>
-                    select Course *
-                  </label>
-                  <input type="text" placeholder='Choose Course' className='w-full p-2 rounded-md' />
-                </div>
-                <div>
-                  <label className=' text-[#025450] '>
-                    Message *
-                  </label>
-                  <input type="text" placeholder='Enter Your Requirements' className='w-full p-2 rounded-md' />
-                </div>
-
                 <div>
 
                   <label className=' text-[#025450] '>
                     Email *
                   </label>
-                  <input type="text" placeholder='Enter Your Mail' className='w-full p-2 rounded-md' />
+                  <input type="text" placeholder='Enter Your Mail' className='w-full p-2 rounded-md' required />
                 </div>
+                <div className="max-w-md mx-auto space-y-4 h-32">
+                  <div>
+
+
+                    <label className='text-[#025450]'>  Select Course *</label>
+                    <select
+                      id="course-level"
+                      value={courseLevel}
+                      onChange={handleLevelChange}
+                      className="mt-1 block w-full p-2 bg-white border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+                      required
+                    >
+                      <option value="" disabled>
+                        Select Course Level
+                      </option>
+                      <option value="UG">UG</option>
+                      <option value="PG">PG</option>
+                      <option value="PG">MBA</option>
+                      <option value="PG">MCA</option>
+                      <option value="Diploma">Diploma</option>
+                    </select>
+                  </div>
+
+                  {courseLevel && (
+                    <select
+                      id="course"
+                      value={selectedCourse}
+                      onChange={handleCourseChange}
+                      className="mt-1 block w-full p-2 bg-white border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+                      required
+                    >
+                      <option value="" disabled>
+                        Select a Course
+                      </option>
+                      {coursesData[courseLevel].map((course, index) => (
+                        <option key={index} value={course}>
+                          {course}
+                        </option>
+                      ))}
+                    </select>
+                  )}
+
+
+                </div>
+                <div>
+                  <label className=' text-[#025450] '>
+                    Message
+                  </label>
+                  <textarea type="text" placeholder='Enter Your Requirements' className='w-full p-2 rounded-md' rows={4} />
+                </div>
+
+
 
                 <div className='text-center'>
 
 
-                  <button className='p-2 px-3 rounded-3xl font-bold bg-white  hover:text-[#FFC906] hover:bg-[#025450]   text-[#025450] '>
+                  <button className='p-2 px-3 rounded-3xl font-bold bg-white  hover:text-[#f4e316] hover:bg-[#025450]   text-[#025450] '>
                     Enquiry Now
                   </button>
                 </div>
@@ -332,10 +392,19 @@ function MainContent() {
 
 
       <section className="max-w-[87rem]  px-5  space-y-5  mx-auto md:my-20 my-10 -z-40">
-        <div className="w-fit h-fit p-1 rounded-2xl bg-[#FFC906] mx-auto text-black px-5">
+        <div className="w-fit h-fit p-1 rounded-2xl mx-auto text-[#025450] px-5">
           <p>Hear From Our</p>
         </div>
-        <p className="text-3xl font-bold text-center text-[#025450]">Happy Students</p>
+        <div className="flex justify-center md:px-0 px-5">
+          <div className="inline-flex items-center rounded-full overflow-hidden">
+            <div className="bg-[#f4e316] text-[#025450] px-4 py-2 text-sm font-bold">
+              HAPPY
+            </div>
+            <div className="bg-[#025450] text-white px-4 py-2 text-sm font-bold">
+              STUDENTS
+            </div>
+          </div>
+        </div>
         <div className='my-5 relative'>
 
 

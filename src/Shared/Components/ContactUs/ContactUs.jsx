@@ -1,6 +1,29 @@
-import React from 'react'
+import React, { useState } from 'react'
 
 function ContactUs() {
+
+  const [courseLevel, setCourseLevel] = useState('');
+  const [selectedCourse, setSelectedCourse] = useState('');
+
+
+  const coursesData = {
+    UG: ['	B.A. Tamil', '	B.Lit. Tamil', 'B.A. Economics', 'B.A. English', 'B.A. History', 'B.A.  Administration', '	B.A. Political Science', '	B.B.A.', '	B.Sc. Mathematics', 'B.Sc. Computer Science'],
+    PG: ['M.A. Economics', 'M.A. English', 'M.A. Tamil', 'M.A. History', '	M.A. Political Science', '	M.A.  Administration', '		M.Sc. Mathematics', '	M.Sc. Computer  Science', 'M.Com', 'M.B.A'],
+    Diploma: ['Diploma in Computer Science', ''],
+  };
+
+
+  const handleLevelChange = (e) => {
+    setCourseLevel(e.target.value);
+    setSelectedCourse('');
+  };
+
+  const handleCourseChange = (e) => {
+    setSelectedCourse(e.target.value);
+  };
+
+
+
   return (
 
     <>
@@ -24,7 +47,7 @@ function ContactUs() {
 
 
           <div className="inline-flex items-center rounded-full overflow-hidden ">
-            <div className="bg-[#FFC906] text-[#025450] px-4 py-2 text-sm font-bold">
+            <div className="bg-[#f4e316] text-[#025450] px-4 py-2 text-sm font-bold">
               VALLUVA'S
             </div>
             <div className="bg-[#025450] text-white px-4 py-2 text-sm font-bold">
@@ -50,43 +73,45 @@ function ContactUs() {
 
                 <div className="w-full lg:w-[70%] p-4">
                   <iframe
-                    className="w-full h-64 lg:h-full rounded-lg"
-                   src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4843.851949796941!2d79.48278327587788!3d11.936726836719792!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a53569133712e0d%3A0x901a813cd106dc17!2sValluvas%20Distance%20Education%20Study%20Centre!5e1!3m2!1sen!2sin!4v1727850169262!5m2!1sen!2sin"
+                    className="w-full h-64 lg:h-[30vh] rounded-lg"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4843.851949796941!2d79.48278327587788!3d11.936726836719792!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a53569133712e0d%3A0x901a813cd106dc17!2sValluvas%20Distance%20Education%20Study%20Centre!5e1!3m2!1sen!2sin!4v1727850169262!5m2!1sen!2sin"
                     allowFullScreen=""
                     loading="lazy"
                     title="Location Map"
                   ></iframe>
                 </div>
 
-                <div className="w-full lg:w-[30%] p-6 flex flex-col  justify-center lg:space-y-16 space-y-5">
+                <div className="w-full lg:w-[30%] p-6 flex flex-col  justify-center  space-y-2">
 
                   <div className="flex items-center">
                     <img
-                      src="/assets/Images/Footer/Location (2).png"
+                      src="/assets/Images/Contact/locate.png"
                       alt="Location Icon"
                       className="w-6 h-6 mr-3"
                     />
                     <p className=" md:text-lg text-sm text-gray-800">
-                      No. 24, Trichy Main Road, 1st Floor, <br />
-                      Es. Hospital Opp., Villupuram – 605602
+                      No. 24, 1
+                      <sup>st</sup>  Floor, Trichy Main Road,  <br />
+                      Opp. To ES Hospital ,<br />
+                      Villupuram – 605602
                     </p>
                   </div>
 
 
                   <div className="flex items-center">
                     <img
-                      src="/assets/Images/Footer/Ringer Volume (2).png"
+                      src="/assets/Images/Contact/Ringer.png"
                       alt="Phone Icon"
                       className="w-6 h-6 mr-3"
                     />
                     <p className=" md:text-lg text-sm text-gray-800">
-                      +91 7010051075, +91 4146 355730
+                      +91 7010051075; +91 4146 355730
                     </p>
                   </div>
 
                   <div className="flex items-center">
                     <img
-                      src="/assets/Images/Footer/Letter (1).png"
+                      src="/assets/Images/Contact/Let.png"
                       alt="Email Icon"
                       className="w-6 h-6 mr-3"
                     />
@@ -102,7 +127,7 @@ function ContactUs() {
             <div className="flex flex-col lg:flex-row bg-white border   overflow-hidden">
 
               <div className="bg-[#00414F] text-white flex justify-center items-center lg:w-[0%] p-4">
-                <h2 className="text-2xl font-bold tracking-widest transform  lg:-rotate-90">TINDIVANAM</h2>
+                <h2 className="text-2xl font-bold tracking-widest transform  lg:-rotate-90 text-[#f4e316]">TINDIVANAM</h2>
               </div>
 
 
@@ -110,19 +135,19 @@ function ContactUs() {
 
                 <div className="w-full lg:w-[70%] p-4">
                   <iframe
-                    className="w-full h-64 lg:h-full rounded-lg"
-                   src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4843.851949796941!2d79.48278327587788!3d11.936726836719792!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a53569133712e0d%3A0x901a813cd106dc17!2sValluvas%20Distance%20Education%20Study%20Centre!5e1!3m2!1sen!2sin!4v1727850169262!5m2!1sen!2sin"
+                    className="w-full h-64 lg:h-[30vh] rounded-lg"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4843.851949796941!2d79.48278327587788!3d11.936726836719792!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a53569133712e0d%3A0x901a813cd106dc17!2sValluvas%20Distance%20Education%20Study%20Centre!5e1!3m2!1sen!2sin!4v1727850169262!5m2!1sen!2sin"
                     allowFullScreen=""
                     loading="lazy"
                     title="Location Map"
                   ></iframe>
                 </div>
 
-                <div className="w-full lg:w-[30%] p-6 flex flex-col  justify-center lg:space-y-16 space-y-5">
+                <div className="w-full lg:w-[30%] p-6 flex flex-col  justify-center  space-y-2">
 
                   <div className="flex items-center">
                     <img
-                      src="/assets/Images/Footer/Location (2).png"
+                      src="/assets/Images/Contact/locate.png"
                       alt="Location Icon"
                       className="w-6 h-6 mr-3"
                     />
@@ -135,18 +160,18 @@ function ContactUs() {
 
                   <div className="flex items-center">
                     <img
-                      src="/assets/Images/Footer/Ringer Volume (2).png"
+                      src="/assets/Images/Contact/Ringer.png"
                       alt="Phone Icon"
                       className="w-6 h-6 mr-3"
                     />
                     <p className=" md:text-lg text-sm text-gray-800">
-                      +91 7010051075, +91 4146 355730
+                      +91 7010051075; +91 4146 355730
                     </p>
                   </div>
 
                   <div className="flex items-center">
                     <img
-                      src="/assets/Images/Footer/Letter (1).png"
+                      src="/assets/Images/Contact/Let.png"
                       alt="Email Icon"
                       className="w-6 h-6 mr-3"
                     />
@@ -170,19 +195,19 @@ function ContactUs() {
 
                 <div className="w-full lg:w-[70%] p-4">
                   <iframe
-                    className="w-full h-64 lg:h-full rounded-lg"
-                      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4843.851949796941!2d79.48278327587788!3d11.936726836719792!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a53569133712e0d%3A0x901a813cd106dc17!2sValluvas%20Distance%20Education%20Study%20Centre!5e1!3m2!1sen!2sin!4v1727850169262!5m2!1sen!2sin"
+                    className="w-full h-64 lg:h-[30vh] rounded-lg"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4843.851949796941!2d79.48278327587788!3d11.936726836719792!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a53569133712e0d%3A0x901a813cd106dc17!2sValluvas%20Distance%20Education%20Study%20Centre!5e1!3m2!1sen!2sin!4v1727850169262!5m2!1sen!2sin"
                     allowFullScreen=""
                     loading="lazy"
                     title="Location Map"
                   ></iframe>
                 </div>
 
-                <div className="w-full lg:w-[30%] p-6 flex flex-col  justify-center lg:space-y-16 space-y-5">
+                <div className="w-full lg:w-[30%] p-6 flex flex-col  justify-center  space-y-2">
 
                   <div className="flex items-center">
                     <img
-                      src="/assets/Images/Footer/Location (2).png"
+                      src="/assets/Images/Contact/locate.png"
                       alt="Location Icon"
                       className="w-6 h-6 mr-3"
                     />
@@ -195,18 +220,18 @@ function ContactUs() {
 
                   <div className="flex items-center">
                     <img
-                      src="/assets/Images/Footer/Ringer Volume (2).png"
+                      src="/assets/Images/Contact/Ringer.png"
                       alt="Phone Icon"
                       className="w-6 h-6 mr-3"
                     />
                     <p className=" md:text-lg text-sm text-gray-800">
-                      +91 7010051075, +91 4146 355730
+                      +91 7010051075; +91 4146 355730
                     </p>
                   </div>
 
                   <div className="flex items-center">
                     <img
-                      src="/assets/Images/Footer/Letter (1).png"
+                      src="/assets/Images/Contact/Let.png"
                       alt="Email Icon"
                       className="w-6 h-6 mr-3"
                     />
@@ -222,12 +247,12 @@ function ContactUs() {
         </section>
       </section>
       <div className='my-5'>
-   
+
 
         <p className="text-center text-[#025450] md:text-xl mb-3 ">Get In Touch</p>
         <div className="flex justify-center md:px-0 px-5">
           <div className="inline-flex items-center rounded-full overflow-hidden">
-            <div className="bg-[#FFC906] text-[#025450] px-4 py-2 text-sm font-bold">
+            <div className="bg-[#f4e316] text-[#025450] px-4 py-2 text-sm font-bold">
               ANY MORE QUESTIONS ?
             </div>
             <div className="bg-[#025450] text-white px-4 py-2 text-sm font-bold">
@@ -246,7 +271,7 @@ function ContactUs() {
             <div className=" ">
               <div className="  rounded-lg">
                 <img
-                  src="/assets/Images/sign/contact.png"
+                  src="/assets/Images/Contact/Grou.png"
                   alt="Bharathidasan University Logo"
                   className="mx-auto"
                 />
@@ -254,49 +279,86 @@ function ContactUs() {
             </div>
 
 
-            <form className=' py-5 my-6 rounded-lg  '>
+            <form className=' py-5rounded-lg  max-w-[35rem] w-full  lg:my-0 my-5 mx-auto'>
 
 
-              <div className='px-5 space-y-6 '>
+              <div className='px-5 space-y-4 '>
 
-                <p className=" text-[#FFC906] text-2xl font-bold">GET FREE COUNSELING</p>
+                <p className=" text-[#f4e316] text-2xl font-bold">GET FREE COUNSELING</p>
                 <div>
                   <label className=' text-white '>
                     Name *
                   </label>
-                  <input type="text" placeholder='Enter Full Name' className='w-full p-2 ' />
+                  <input type="text" placeholder='Enter Full Name' className='w-full p-2 rounded-md' />
                 </div>
                 <div>
                   <label className=' text-white '>
                     Mobile No *
                   </label>
-                  <input type="text" placeholder='Enter Your Whatsapp No' className='w-full p-2 ' />
+                  <input type="text" placeholder='Enter Your Whatsapp No' className='w-full p-2 rounded-md' />
                 </div>
-                <div>
-                  <label className=' text-white '>
-                    select Course *
-                  </label>
-                  <input type="text" placeholder='Choose Course' className='w-full p-2 ' />
-                </div>
-                <div>
-                  <label className=' text-white '>
-                    Message *
-                  </label>
-                  <input type="text" placeholder='Enter Your Requirements' className='w-full p-2 ' />
-                </div>
-
                 <div>
 
                   <label className=' text-white '>
                     Email *
                   </label>
-                  <input type="text" placeholder='Enter Your Mail' className='w-full p-2 ' />
+                  <input type="text" placeholder='Enter Your Mail' className='w-full p-2 rounded-md ' />
+                </div>
+                <div className=" mx-auto space-y-4 h-32">
+                  <div>
+
+
+                    <label className='text-white'>  Select Course *</label>
+                    <select
+                      id="course-level"
+                      value={courseLevel}
+                      onChange={handleLevelChange}
+                      className="mt-1 block w-full p-2 bg-white border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+                      required
+                    >
+                      <option value="" disabled>
+                        Select Course Level
+                      </option>
+                      <option value="UG">UG</option>
+                      <option value="PG">PG</option>
+                      <option value="Diploma">Diploma</option>
+                    </select>
+                  </div>
+
+                  {courseLevel && (
+                    <select
+                      id="course"
+                      value={selectedCourse}
+                      onChange={handleCourseChange}
+                      className="mt-1 block w-full p-2 bg-white border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+                      required
+                    >
+                      <option value="" disabled>
+                        Select a Course
+                      </option>
+                      {coursesData[courseLevel].map((course, index) => (
+                        <option key={index} value={course}>
+                          {course}
+                        </option>
+                      ))}
+                    </select>
+                  )}
+
+
+                </div>
+                <div>
+                  <label className=' text-white '>
+                    Message *
+                  </label>
+                  <textarea rows={4} type="text" placeholder='Enter Your Requirements' className='w-full p-2  rounded-md' />
                 </div>
 
-                <div className=''>
 
 
-                  <button className='p-2 px-3 rounded-3xl font-bold  hover:bg-white  hover:text-[#FFC906] bg-[#FFC906] text-[#025450] '>
+                <div className='text-center'>
+
+
+                  <button className='p-2 px-3 rounded-3xl font-bold  hover:bg-white  hover:text-[#f4e316] bg-[#f4e316] text-[#025450] '>
                     Enquiry Now
                   </button>
                 </div>

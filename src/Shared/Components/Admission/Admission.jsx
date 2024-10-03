@@ -80,7 +80,7 @@ function Admission() {
             <p className="text-center text-[#025450] md:text-xl mb-3 ">Road To Success</p>
             <div className="flex justify-center">
               <div className="inline-flex items-center rounded-full overflow-hidden">
-                <div className="bg-[#FFC906] text-[#025450] px-4 py-2 text-sm font-bold">
+                <div className="bg-[#f4e316] text-[#025450] px-4 py-2 text-sm font-bold">
                   THE THREE
                 </div>
                 <div className="bg-[#025450] text-white px-4 py-2 text-sm font-bold">
@@ -186,10 +186,19 @@ function Admission() {
 
 
       <section className="max-w-[87rem]  px-5  space-y-5  mx-auto my-20">
-        <div className="w-fit h-fit p-1 rounded-2xl bg-[#FFC906] mx-auto text-black px-5">
+        <div className="w-fit h-fit p-1 rounded-2xl mx-auto text-[#025450] px-5">
           <p>Hear From Our</p>
         </div>
-        <p className="text-3xl font-bold text-center text-[#025450]">Happy Students</p>
+        <div className="flex justify-center md:px-0 px-5">
+          <div className="inline-flex items-center rounded-full overflow-hidden">
+            <div className="bg-[#f4e316] text-[#025450] px-4 py-2 text-sm font-bold">
+              HAPPY
+            </div>
+            <div className="bg-[#025450] text-white px-4 py-2 text-sm font-bold">
+              STUDENTS
+            </div>
+          </div>
+        </div>
        <div className='my-5 '>
 
       

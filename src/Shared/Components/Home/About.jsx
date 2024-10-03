@@ -11,7 +11,7 @@ function About() {
                         <p >Distance Education</p>
                     </div>
 
-                    <p className="md:text-4xl text-2xl font-bold  text-[#FFC906]">Ignite Your Growth With Valluva’s</p>
+                    <p className="md:text-4xl text-basee font-bold bg-[#025450] py-2 px-3 max-w-[50rem] mx-auto rounded-3xl  text-[#f4e316]">Ignite Your Growth With Valluva’s</p>
                     <div className="max-w-[50rem] mx-auto  md:bg-[url('/assets/Images/About/agg.jpg')]   bg-cover rounded-2xl border-[#025450] border-4 bg-center">
 
 
@@ -22,7 +22,7 @@ function About() {
 
                             </div>
                             <div className='md:py-36 py-5 '>
-                                <p className="lg:text-4xl text-lg text-[#025450] font-bold mb-5">Explore Our Courses</p>
+                                <p className="md:text-4xl text-lg text-[#025450] font-bold mb-5">Explore Our Courses</p>
                                 <Link to='/course'>
 
                                     <button className='rounded-3xl bg-[#025450] lg:text-base hover:text-[#025450] hover:bg-[#FFC906] font-bold text-sm  p-2 px-3 text-white'>

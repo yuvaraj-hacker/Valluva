@@ -80,7 +80,7 @@ function Courses() {
           <p className="text-center md:text-4xl text-2xl text-[#025450]">Programmes Offered</p>
           <div className="flex justify-center">
             <div className="inline-flex items-center rounded-full overflow-hidden">
-              <div className="bg-[#FFC906] text-[#025450] px-4 py-2 text-sm font-bold">
+              <div className="bg-[#f4e316] text-[#025450] px-4 py-2 text-sm font-bold">
                 UG
               </div>
               <div className="bg-[#025450] text-white px-4 py-2 text-sm font-bold">
@@ -267,7 +267,7 @@ function Courses() {
         
           <div className="flex justify-center">
             <div className="inline-flex items-center rounded-full overflow-hidden">
-              <div className="bg-[#FFC906] text-[#025450] px-4 py-2 text-sm font-bold">
+              <div className="bg-[#f4e316] text-[#025450] px-4 py-2 text-sm font-bold">
                 PG
               </div>
               <div className="bg-[#025450] text-white px-4 py-2 text-sm font-bold">
@@ -445,10 +445,19 @@ function Courses() {
 
 
       <section className="max-w-[87rem]  px-5  space-y-5  mx-auto my-20">
-        <div className="w-fit h-fit p-1 rounded-2xl bg-[#FFC906] mx-auto text-black px-5">
+        <div className="w-fit h-fit p-1 rounded-2xl text-[#025450]  mx-auto  px-5">
           <p>Hear From Our</p>
         </div>
-        <p className="text-3xl font-bold text-center text-[#025450]">Happy Students</p>
+        <div className="flex justify-center md:px-0 px-5">
+          <div className="inline-flex items-center rounded-full overflow-hidden">
+            <div className="bg-[#f4e316] text-[#025450] px-4 py-2 text-sm font-bold">
+              HAPPY
+            </div>
+            <div className="bg-[#025450] text-white px-4 py-2 text-sm font-bold">
+              STUDENTS
+            </div>
+          </div>
+        </div>
        <div className='my-5 '>
 
       
