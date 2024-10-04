@@ -54,7 +54,7 @@ function Courses() {
 
   return (
     <>
-      <section className="bg-[url('/assets/Images/Header/Group-3.png')]  bg-no-repeat  bg-cover bg-center  h-[20vh] my-4 ">
+      <section className="bg-[url('/assets/Images/Header/Group-3.png')]  bg-no-repeat  bg-cover bg-center  h-[20vh] my-2 ">
         <div className="max-w-[90rem] mx-auto px-10 h-[20vh] items-center grid ">
           <div className="  md:text-5xl text-2xl text-white">Courses</div>
         </div>

@@ -14,7 +14,10 @@ function MainContent() {
   const coursesData = {
     UG: ['	B.A. Tamil', '	B.Lit. Tamil', 'B.A. Economics', 'B.A. English', 'B.A. History', 'B.A. Public Administration', '	B.A. Political Science', '	B.B.A.', '	B.Sc. Mathematics', 'B.Sc. Computer Science'],
     PG: ['M.A. Economics', 'M.A. English', 'M.A. Tamil', 'M.A. History', '	M.A. Political Science', '	M.A. Public Administration', '		M.Sc. Mathematics', '	M.Sc. Computer  Science', 'M.Com', 'M.B.A'],
-    Diploma: ['Diploma in Computer Science', ''],
+    Diploma: ['', ''],
+    Certificate: ['', ''],
+    MBA: ['', ''],
+    MCA: ['', ''],
   };
 
 
@@ -113,7 +116,7 @@ function MainContent() {
                   <p className="text-[#025450] group-hover:text-white">
                     Select Course
                   </p>
-                  <img src="/assets/Images/Header/Arrow.png" alt="" />
+                  <img src="/assets/Images/sign/Arrows.png" alt="" />
                 </div>
               </div>
             </Link>
@@ -135,7 +138,7 @@ function MainContent() {
                 </div>
                 <div className='flex gap-3 justify-end'>
                   <p className=" text-[#025450] group-hover:text-white">Select Course</p>
-                  <img src="/assets/Images/Header/Arrow.png" alt="" />
+                  <img src="/assets/Images/sign/Arrows.png" alt="" />
                 </div>
               </div>
 
@@ -156,7 +159,7 @@ function MainContent() {
                 </div>
                 <div className='flex gap-3 justify-end'>
                   <p className=" text-[#025450] group-hover:text-white">Select Course</p>
-                  <img src="/assets/Images/Header/Arrow.png" alt="" />
+                  <img src="/assets/Images/sign/Arrows.png" alt="" />
                 </div>
               </div>
             </Link>
@@ -176,7 +179,7 @@ function MainContent() {
                 </div>
                 <div className='flex gap-3 justify-end'>
                   <p className=" text-[#025450] group-hover:text-white">Select Course</p>
-                  <img src="/assets/Images/Header/Arrow.png" alt="" />
+                  <img src="/assets/Images/sign/Arrows.png" alt="" />
                 </div>
               </div>
             </Link>
@@ -196,7 +199,7 @@ function MainContent() {
                 </div>
                 <div className='flex gap-3 justify-end'>
                   <p className=" text-[#025450] group-hover:text-white">Select Course</p>
-                  <img src="/assets/Images/Header/Arrow.png" alt="" />
+                  <img src="/assets/Images/sign/Arrows.png" alt="" />
                 </div>
               </div>
             </Link>
@@ -216,7 +219,7 @@ function MainContent() {
                 </div>
                 <div className='flex gap-3 justify-end'>
                   <p className=" text-[#025450] group-hover:text-white">Select Course</p>
-                  <img src="/assets/Images/Header/Arrow.png" alt="" />
+                  <img src="/assets/Images/sign/Arrows.png" alt="" />
                 </div>
               </div>
             </Link>
@@ -333,9 +336,10 @@ function MainContent() {
                       </option>
                       <option value="UG">UG</option>
                       <option value="PG">PG</option>
-                      <option value="PG">MBA</option>
-                      <option value="PG">MCA</option>
+                      <option value="MBA">MBA</option>
+                      <option value="MCA">MCA</option>
                       <option value="Diploma">Diploma</option>
+                      <option value="Certificate">Certificate Courses</option>
                     </select>
                   </div>
 
@@ -452,7 +456,7 @@ function MainContent() {
 
       </section>
       <div className='relative -top-[200px] -mb-64 lg:block hidden flex justify-center -z-20 items-center'>
-        <img src="/assets/Images/About/test.png" alt="" className='w-full' />
+        <img src="/assets/Images/Rotate/test.png" alt="" className='w-full' />
       </div>
     </>
   )

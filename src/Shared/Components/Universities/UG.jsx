@@ -12,7 +12,7 @@ function UG() {
                     Duration for B.L.I.S Programme: 1 Year
                 </p>
                 <div className="overflow-x-auto">
-                    <table className="min-w-full bg-white border border-gray-300 rounded-lg">
+                    <table className="min-w-full bg-white border border-gray-300 rounded-lg text-justify">
                         <thead>
                             <tr className=" border-b">
                                 <th className="py-3 px-4 text-left text-sm font-semibold text-gray-700 border-r w-1/12">
@@ -163,8 +163,8 @@ function UG() {
                             <tr className=" border-b">
                                 <td className="py-2 px-4 text-sm text-gray-600 border-r">21</td>
                                 <td className="py-2 px-4 text-sm text-gray-600 border-r">B.A. AFZAL-UL-ULAMA</td>
-                                <td className="py-2 px-4 text-sm text-gray-600 border-r"></td>
-                                <td className="py-2 px-4 text-sm text-gray-600"></td>
+                                <td className="py-2 px-4 text-sm text-gray-600 border-r">English</td>
+                                <td className="py-2 px-4 text-sm text-gray-600">A pass in any UG Degree (after 10th and +2)</td>
                             </tr>
 
                             <tr className=" border-b">

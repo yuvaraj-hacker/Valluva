@@ -51,7 +51,7 @@ function Admission() {
   ];
   return (
     <>
-      <section className="bg-[url('/assets/Images/Header/Group-3.png')]  bg-no-repeat  bg-cover bg-center  h-[20vh] my-4 ">
+      <section className="bg-[url('/assets/Images/Header/Group-3.png')]  bg-no-repeat  bg-cover bg-center  h-[20vh] my-2 ">
         <div className='max-w-[90rem] mx-auto px-10 h-[20vh] items-center grid '>
           <div className='  md:text-5xl text-2xl text-white'>
             Admission
@@ -147,7 +147,7 @@ function Admission() {
 
         <section className="bg-blue-50 py-10 px-6">
           <div className="max-w-5xl mx-auto text-center">
-            <h2 className="text-2xl md:text-3xl font-semibold text-[#025450] mb-4">
+            <h2 className="text-2xl md:text-3xl font-semibold text-[#025450] mb-2">
               Admission Procedure for Degree
             </h2>
             <p className="text-gray-700 md:text-base text-sm">

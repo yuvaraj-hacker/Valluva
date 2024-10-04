@@ -33,8 +33,8 @@ function Footer() {
 
 
                 <div className="space-y-5 lg:col-span-3">
-                  <div className="flex items-center">
-                    <img src="/assets/Images/Header/Logo 1.png" alt="Valluva's Logo" className="w-24 h-16" />
+                  <div className="flex items-center gap-2">
+                    <img src="/assets/Images/Header/logo 4.png" alt="Valluva's Logo" className="w-16 " />
                     <img src="/assets/Images/Header/2.png" alt="logo" className='w-28' />
                   </div>
                   <p className='text-justify'>

@@ -17,6 +17,19 @@ import Diplomamadras from "./UniversityOfMadras/Diplomamadras";
 import UGalagappa from "./Alagappa/UGalagappa";
 import PGalagappa from "./Alagappa/PGalagappa";
 import MBAalagappa from "./Alagappa/MBAalagappa";
+import UGmanon from "./Manon/UGmanon";
+import UGtamilnadu from "./Tamilnadu/UGtamilnadu";
+import PGtamilnadu from "./Tamilnadu/PGtamilnadu";
+import AdvanceVocational from "./Tamilnadu/AdvanceVocational";
+import DiplomaTamilnadu from "./Tamilnadu/DiplomaTamilnadu";
+import UGacademic1 from "./Tamilnadu/UGacademic1";
+import PGacademic1 from "./Tamilnadu/PGacademic1";
+import Voactional from "./Tamilnadu/Voactional";
+import CertificateProgram from "./Tamilnadu/CertificateProgram";
+import ShortTerm from "./Tamilnadu/ShortTerm";
+import PGmanon from "./Manon/PGmanon";
+import PGbharathiyar from "./Bharathiyar/PGbharathiyar";
+import DiplomaCerti from "./Alagappa/DiplomaCerti";
 function University() {
   const [isAccordionOpen, setIsAccordionOpen] = useState(false);
   const toggleAccordion = () => {
@@ -30,6 +43,22 @@ function University() {
   const [isAccordions, setIsAccordions] = useState(false);
   const toggleAccords = () => {
     setIsAccordions(!isAccordions);
+  };
+
+  const [isAc, setIs] = useState(false);
+  const togg = () => {
+    setIs(!isAc);
+  };
+
+  const [isTamilnadu, setIsTamilnadu] = useState(false);
+  const toggleTamilnadu = () => {
+    setIsTamilnadu(!isTamilnadu);
+  };
+
+
+  const [isBharathiyar, setIsBharathiyar] = useState(false);
+  const toggleBharathiyar = () => {
+    setIsBharathiyar(!isBharathiyar);
   };
 
 
@@ -115,7 +144,7 @@ function University() {
   ];
   return (
     <>
-      <section className="bg-[url('/assets/Images/Header/Group-3.png')]  bg-no-repeat  bg-cover bg-center  h-[20vh] my-4 ">
+      <section className="bg-[url('/assets/Images/Header/Group-3.png')]  bg-no-repeat  bg-cover bg-center  h-[20vh] my-2 ">
         <div className="max-w-[90rem] mx-auto px-10 h-[20vh] items-center grid ">
           <div className="  md:text-5xl text-2xl text-white">Universities</div>
         </div>
@@ -141,13 +170,13 @@ function University() {
                 <div className="col-span-2">
                   <div className="rounded-lg">
                     <img
-                      src="/assets/Images/university/uni.png"
+                      src="/assets/Images/university/uni3.png"
                       alt="Bharathidasan University Logo"
                       className="mx-auto"
                     />
                   </div>
                 </div>
-                <div className="col-span-7 px-5 text-justify my-5">
+                <div className="col-span-7 px-5 text-justify my-4 ">
                   <h1 className="md:text-2xl text-lg font-bold text-blue-900">
                     Bharathidasan University
                   </h1>
@@ -285,7 +314,7 @@ function University() {
               <div className="flex-shrink-0  col-span-2">
                 <div className="  rounded-lg">
                   <img
-                    src="/assets/Images/university/university2.png"
+                    src="/assets/Images/university/uni2.png"
                     alt="Bharathidasan University Logo"
                     className="mx-auto"
                   />
@@ -358,7 +387,18 @@ function University() {
                   <PGmadras />
                 )}
               </div>
-
+              <div>
+                <div
+                  className="flex justify-between items-center cursor-pointer md:text-lg text-base font-bold text-blue-900"
+                  onClick={() => toggle(9)}
+                >
+                  DIPLOMA COURSE (ONE YEAR)
+                  {activeIndexes.includes(9) ? <FaChevronUp /> : <FaChevronDown />}
+                </div>
+                {activeIndexes.includes(9) && (
+                  <Diplomamadras />
+                )}
+              </div>
 
               <div>
                 <div
@@ -373,18 +413,7 @@ function University() {
                 )}
               </div>
 
-              <div>
-                <div
-                  className="flex justify-between items-center cursor-pointer md:text-lg text-base font-bold text-blue-900"
-                  onClick={() => toggle(9)}
-                >
-                 DIPLOMA COURSE
-                  {activeIndexes.includes(9) ? <FaChevronUp /> : <FaChevronDown />}
-                </div>
-                {activeIndexes.includes(9) && (
-                  <Diplomamadras />
-                )}
-              </div>
+
 
 
 
@@ -411,7 +440,7 @@ function University() {
               <div className="flex-shrink-0 col-span-2">
                 <div className="  rounded-lg">
                   <img
-                    src="/assets/Images/university/uni.png"
+                    src="/assets/Images/university/uni3.png"
                     alt="Bharathidasan University Logo"
                     className="mx-auto"
                   />
@@ -499,6 +528,19 @@ function University() {
                   <MBAalagappa />
                 )}
               </div>
+
+              <div>
+                <div
+                  className="flex justify-between items-center cursor-pointer md:text-lg text-base font-bold text-blue-900"
+                  onClick={() => toggle(26)}
+                >
+                  Diploma & Certificate Programmes Under Distance Learning (ODL) mode
+                  {activeIndexes.includes(26) ? <FaChevronUp /> : <FaChevronDown />}
+                </div>
+                {activeIndexes.includes(26) && (
+                  <DiplomaCerti/>
+                )}
+              </div>
             </section>
 
           )}
@@ -515,7 +557,7 @@ function University() {
               <div className="flex-shrink-0 col-span-2">
                 <div className="  rounded-lg">
                   <img
-                    src="/assets/Images/university/university2.png"
+                    src="/assets/Images/university/uni2.png"
                     alt="Bharathidasan University Logo"
                     className="mx-auto"
                   />
@@ -535,17 +577,81 @@ function University() {
                   offer students support and direction throughout their studies. Suppose you want to advance your education by focusing on practical,
                   hands-on learning. In that case, Madras University distance education programs are a great choice.
                 </p>
+                <button
+                  className="mt-4 flex items-center bg-[#025450] hover:bg-teal-600 text-white font-semibold py-2 px-4 md:text-base text-sm rounded-lg transition-all duration-300"
+                  onClick={togg}
+                >
+                  Programmes Offered
+                  <span className="ml-2">
+                    {isAc ? (
+                      <FaChevronUp className="transition-transform duration-300" />
+                    ) : (
+                      <FaChevronDown className="transition-transform duration-300" />
+                    )}
+                  </span>
+                </button>
+
+
+
+
               </div>
             </div>
           </div>
         </section>
+
+
+        <div
+          className={`overflow-hidden transition-all duration-500 ease-in-out ${isAc ? "" : ""
+            }`}
+        >
+          {isAc && (
+
+
+            <section className="max-w-[80rem] px-5 mx-auto py-10 space-y-3">
+
+
+              <div>
+                <div
+                  className="flex justify-between items-center cursor-pointer md:text-lg text-base font-bold text-blue-900"
+                  onClick={() => toggle(13)}
+                >
+                  Programmes offered under Open and Distance Learning (ODL) Mode
+                  {activeIndexes.includes(13) ? <FaChevronUp /> : <FaChevronDown />}
+                </div>
+                {activeIndexes.includes(13) && (
+                  <div>
+                    <UGmanon />
+                  </div>
+                )}
+              </div>
+
+              <div>
+                <div
+                  className="flex justify-between items-center cursor-pointer md:text-lg text-base font-bold text-blue-900"
+                  onClick={() => toggle(14)}
+                >
+                  Programmes offered under Online (OL) Mode (UGC Entitled ONLINE Programmes)
+                  {activeIndexes.includes(14) ? <FaChevronUp /> : <FaChevronDown />}
+                </div>
+                {activeIndexes.includes(14) && (
+                  <PGmanon />
+                )}
+              </div>
+
+
+
+
+            </section>
+
+          )}
+        </div>
         <section className="max-w-[87rem] px-5 mx-auto">
           <div>
             <div className="grid lg:grid-cols-9 grid-cols-1  mx-auto items-center  border border-gray-200 rounded-lg  bg-white  hover:bg-[#F0F7FF] shadow-md ">
               <div className="flex-shrink-0 col-span-2">
                 <div className="  rounded-lg">
                   <img
-                    src="/assets/Images/university/uni.png"
+                    src="/assets/Images/university/uni3.png"
                     alt="Bharathidasan University Logo"
                     className="mx-auto"
                   />
@@ -564,17 +670,185 @@ function University() {
                   They are affordable and emphasize practical, hands-on learning, making them accessible to students from all backgrounds. To guarantee
                   that students receive a comprehensive education, the university also provides support services like online libraries and counseling.
                 </p>
+
+
+                <button
+                  className="mt-4 flex items-center bg-[#025450] hover:bg-teal-600 text-white font-semibold py-2 px-4 md:text-base text-sm rounded-lg transition-all duration-300"
+                  onClick={toggleTamilnadu}
+                >
+                  Programmes Offered
+                  <span className="ml-2">
+                    {isTamilnadu ? (
+                      <FaChevronUp className="transition-transform duration-300" />
+                    ) : (
+                      <FaChevronDown className="transition-transform duration-300" />
+                    )}
+                  </span>
+                </button>
+
               </div>
             </div>
           </div>
         </section>
+        <div
+          className={`overflow-hidden transition-all duration-500 ease-in-out ${isTamilnadu ? "" : ""
+            }`}
+        >
+          {isTamilnadu && (
+
+
+            <section className="max-w-[80rem] px-5 mx-auto py-10 space-y-3">
+
+
+              <div>
+                <div
+                  className="flex justify-between items-center cursor-pointer md:text-lg text-base font-bold text-blue-900"
+                  onClick={() => toggle(16)}
+                >
+                  UNDERGRTE (UG)
+                  {activeIndexes.includes(16) ? <FaChevronUp /> : <FaChevronDown />}
+                </div>
+                {activeIndexes.includes(16) && (
+                  <UGtamilnadu />
+                )}
+              </div>
+
+
+              <div>
+                <div
+                  className="flex justify-between items-center cursor-pointer md:text-lg text-base font-bold text-blue-900"
+                  onClick={() => toggle(17)}
+                >
+                  POSTGRADUATE (PG)
+                  {activeIndexes.includes(17) ? <FaChevronUp /> : <FaChevronDown />}
+                </div>
+                {activeIndexes.includes(17) && (
+                  <PGtamilnadu />
+                )}
+              </div>
+
+
+              <div>
+                <div
+                  className="flex justify-between items-center cursor-pointer md:text-lg text-base font-bold text-blue-900"
+                  onClick={() => toggle(18)}
+                >
+                  Adv. Vocational Diploma Programmes
+                  {activeIndexes.includes(18) ? <FaChevronUp /> : <FaChevronDown />}
+                </div>
+                {activeIndexes.includes(18) && (
+                  <AdvanceVocational />
+                )}
+              </div>
+
+              <div>
+                <div
+                  className="flex justify-between items-center cursor-pointer md:text-lg text-base font-bold text-blue-900"
+                  onClick={() => toggle(19)}
+                >
+                  Diploma Programmes
+                  {activeIndexes.includes(19) ? <FaChevronUp /> : <FaChevronDown />}
+                </div>
+                {activeIndexes.includes(19) && (
+                  <DiplomaTamilnadu />
+                )}
+              </div>
+
+
+              <div>
+                <div
+                  className="flex justify-between items-center cursor-pointer md:text-lg text-base font-bold text-blue-900"
+                  onClick={() => toggle(20)}
+                >
+                  UG  Science Programmes Academic Year  only
+                  {activeIndexes.includes(20) ? <FaChevronUp /> : <FaChevronDown />}
+                </div>
+                {activeIndexes.includes(20) && (
+                  <UGacademic1 />
+                )}
+              </div>
+
+
+              <div>
+                <div
+                  className="flex justify-between items-center cursor-pointer md:text-lg text-base font-bold text-blue-900"
+                  onClick={() => toggle(21)}
+                >
+                  PG  Science Programmes Academic Year  only
+                  {activeIndexes.includes(21) ? <FaChevronUp /> : <FaChevronDown />}
+                </div>
+                {activeIndexes.includes(21) && (
+                  <PGacademic1 />
+                )}
+              </div>
+
+
+              <div>
+                <div
+                  className="flex justify-between items-center cursor-pointer md:text-lg text-base font-bold text-blue-900"
+                  onClick={() => toggle(22)}
+                >
+                  Vocational Diploma Programmes
+                  {activeIndexes.includes(22) ? <FaChevronUp /> : <FaChevronDown />}
+                </div>
+                {activeIndexes.includes(22) && (
+                  <Voactional />
+                )}
+              </div>
+
+              <div>
+                <div
+                  className="flex justify-between items-center cursor-pointer md:text-lg text-base font-bold text-blue-900"
+                  onClick={() => toggle(23)}
+                >
+                  Certificate Programmes
+                  {activeIndexes.includes(23) ? <FaChevronUp /> : <FaChevronDown />}
+                </div>
+                {activeIndexes.includes(23) && (
+                  <CertificateProgram />
+                )}
+              </div>
+              <div>
+                <div
+                  className="flex justify-between items-center cursor-pointer md:text-lg text-base font-bold text-blue-900"
+                  onClick={() => toggle(24)}
+                >
+
+                  Short  Term Courses
+                  {activeIndexes.includes(24) ? <FaChevronUp /> : <FaChevronDown />}
+                </div>
+                {activeIndexes.includes(24) && (
+                  <ShortTerm />
+                )}
+              </div>
+
+
+
+
+
+
+
+
+
+            </section>
+
+
+
+
+
+
+
+
+
+          )}
+        </div>
         <section className="max-w-[87rem] px-5 mx-auto">
           <div>
             <div className="grid lg:grid-cols-9 grid-cols-1  mx-auto items-center  border border-gray-200 rounded-lg  bg-white  hover:bg-[#F0F7FF] shadow-md ">
               <div className="flex-shrink-0 col-span-2">
                 <div className="  rounded-lg">
                   <img
-                    src="/assets/Images/university/university2.png"
+                    src="/assets/Images/university/uni2.png"
                     alt="Bharathidasan University Logo"
                     className="mx-auto"
                   />
@@ -582,22 +856,86 @@ function University() {
               </div>
               <div className=" col-span-7  px-5 text-justify my-5">
                 <h1 className="md:text-2xl text-lg font-bold text-blue-900">
-                  ISBM University
+                  Bharathiyar University
                 </h1>
                 <p className="text-gray-700 mt-2 text-sm">
-                  Madras University offers numerous distance education programs in various fields, including education, business, management, the arts, and
-                  science. Through a combination of study materials, online lectures, and interactive sessions, programs provide learners with flexible and
-                  convenient learning options. They are very affordable and emphasize practical, hands-on learning.
+                  The School of Distance Education (SDE) of Bharathiar University was established
+                  during the academic year 1991-1992. All the courses offered by SDE are approved
+                  by University Grants Commission, Distance Education Council (UGC-DEC) and then
+                  Distance Education Bureau (UGC-DEB), under the Ministry of Human Resources Development,
+                  Government of India. School of Distance Education of Bharathiar University is strictly
+                  adhering the UGC-DEB regulations as and when amended in the Gazette of Government of India.
                 </p>
-                <p className="text-gray-700 mt-2 text-sm">
-                  Additionally, Madras University offers support services like online libraries and counseling. The dedicated academic advisors at the university
-                  offer students support and direction throughout their studies. Suppose you want to advance your education by focusing on practical,
-                  hands-on learning. In that case, Madras University distance education programs are a great choice.
-                </p>
+                <p className="text-gray-700 mt-2 text-sm">With a dedicated team of faculty who have a
+                  rich experience in teaching and research are sharing their
+                  domain knowledge as Programme and Course Co-ordinators, mentors
+                  and dedicated and experienced administrative staff, the University
+                  has emerged as one of the strong pillars of higher education not
+                  only in the state and the nation but also around the globe.</p>
+
+
+
+                <button
+                  className="mt-4 flex items-center bg-[#025450] hover:bg-teal-600 text-white font-semibold py-2 px-4 md:text-base text-sm rounded-lg transition-all duration-300"
+                  onClick={toggleBharathiyar}
+                >
+                  Programmes Offered
+                  <span className="ml-2">
+                    {isBharathiyar ? (
+                      <FaChevronUp className="transition-transform duration-300" />
+                    ) : (
+                      <FaChevronDown className="transition-transform duration-300" />
+                    )}
+                  </span>
+                </button>
+
               </div>
             </div>
           </div>
         </section>
+        <div
+          className={`overflow-hidden transition-all duration-500 ease-in-out ${isBharathiyar ? "" : ""
+            }`}
+        >
+          {isBharathiyar && (
+
+
+            <section className="max-w-[80rem] px-5 mx-auto py-10 space-y-3">
+
+
+              <div>
+                <div
+                  className="flex justify-between items-center cursor-pointer md:text-lg text-base font-bold text-blue-900"
+                  onClick={() => toggle(25)}
+                >
+                  POST GRADUATE (PG)
+                  {activeIndexes.includes(25) ? <FaChevronUp /> : <FaChevronDown />}
+                </div>
+                {activeIndexes.includes(25) && (
+                  <PGbharathiyar />
+                )}
+              </div>
+
+
+
+
+
+
+
+
+
+            </section>
+
+
+
+
+
+
+
+
+
+          )}
+        </div>
       </section>
       <section className="max-w-[87rem]  px-5  space-y-5  mx-auto my-20">
         <div className="w-fit h-fit p-1 rounded-2xl mx-auto text-[#025450]   px-5">

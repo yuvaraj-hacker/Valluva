@@ -25,7 +25,7 @@ function HeroSection() {
 
     return (
         <section className="bg-[url('/assets/Images/HeroSection/bg-0.png')] bg-no-repeat bg-cover bg-center lg:h-[90vh]">
-            <div className='max-w-[95rem] mx-auto px-10 flex justify-center items-center lg:h-[75vh] md:h-[65vh] h-[60vh] md:mt-0 mt-6'>
+            <div className='max-w-[95rem] mx-auto px-10 flex justify-center items-center lg:h-[75vh] md:h-[65vh] h-[60vh] md:mt-0 mt-2'>
                 <div className='grid lg:grid-cols-2 grid-cols-1 items-center gap-5  '>
                     <div className='space-y-10'>
                         <div className='space-y-2'>
@@ -113,22 +113,20 @@ function HeroSection() {
                                 </div>
                             </div>
                         </div> */}
-                    </div> 
+                    </div>
+                    <div className="overflow-hidden col-span-2">
+                        <div className="whitespace-nowrap p-4 text-center font-bold text-lg md:text-2xl text-[#f4e316] col-span-2 mt-5 z-50 animate-marquee">
+                            <div>
+                                <span>🎉 Admissions are now OPEN! Apply Today! 🎓</span>
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
             </div>
-            {showBanner && (
-                <div className="bg-gradient-to-r from-[#025450] to-[#2ab9b7] text-white p-4 text-center font-bold shadow-lg fixed bottom-0 w-full z-50 animate-slide-up">
-                    <span className="text-lg md:text-2xl animate-fade-in text-[#f4e316] ">
-                        🎉 Admissions are now OPEN! Apply Today! 🎓
-                    </span>
-                    <Link
-                        to="/admission"
-                        className="block mt-2 text-[#025450]  hover:bg-gray-100 bg-[#f4e316] py-2 px-4 rounded-full text-sm md:inline-block md:ml-4 animate-fade-in"
-                    >
-                        Learn More & Apply Now
-                    </Link>
-                </div>
-            )}
+
+
+
             <div className='px-5 lg:mt-5'>
                 <div className="max-w-[85rem] mx-auto border-4 border-white bg-[url('/assets/Images/HeroSection/final-counter.png')] bg-cover grid md:grid-cols-4 grid-cols-2 lg:gap-0 gap-1 text-[#025450] md:p-5 p-2 rounded-3xl">
                     <div className="flex flex-col items-center">

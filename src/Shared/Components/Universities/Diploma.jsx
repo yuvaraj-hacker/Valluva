@@ -7,7 +7,7 @@ function Diploma() {
     <div className="mt-5">
                    
                     <div className="overflow-x-auto">
-                        <table className="min-w-full bg-white border border-gray-300 rounded-lg">
+                        <table className="min-w-full bg-white border border-gray-300 rounded-lg text-justify">
                             <thead>
                                 <tr className=" border-b">
                                     <th className="py-3 px-4 text-left text-sm font-semibold text-gray-700 border-r w-1/12">

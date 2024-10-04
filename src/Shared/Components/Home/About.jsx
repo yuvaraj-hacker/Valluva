@@ -12,7 +12,7 @@ function About() {
                     </div>
 
                     <p className="md:text-4xl text-basee font-bold bg-[#025450] py-2 px-3 max-w-[50rem] mx-auto rounded-3xl  text-[#f4e316]">Ignite Your Growth With Valluva’s</p>
-                    <div className="max-w-[50rem] mx-auto  md:bg-[url('/assets/Images/About/agg.jpg')]   bg-cover rounded-2xl border-[#025450] border-4 bg-center">
+                    <div className="max-w-[50rem] mx-auto md:p-0 p-2 bg-[url('/assets/Images/About/agg.jpg')]   bg-cover rounded-2xl border-[#025450] border-4 bg-center">
 
 
                         <div className='grid lg:grid-cols-2'>
@@ -22,7 +22,7 @@ function About() {
 
                             </div>
                             <div className='md:py-36 py-5 '>
-                                <p className="md:text-4xl text-lg text-[#025450] font-bold mb-5">Explore Our Courses</p>
+                                <p className="md:text-4xl text-xl text-[#025450] font-bold mb-5">Explore Our Courses</p>
                                 <Link to='/course'>
 
                                     <button className='rounded-3xl bg-[#025450] lg:text-base hover:text-[#025450] hover:bg-[#FFC906] font-bold text-sm  p-2 px-3 text-white'>
@@ -41,29 +41,29 @@ function About() {
 
                         <div className=" grid md:grid-cols-3 grid-cols-1 px-5  md:justify-between   text-[#025450] font-bold md:text-base text-sm">
                             <div className='flex gap-1 items-center'>
-                                <img src="/assets/Images/Header/Pen.png" alt="" />
+                                <img src="/assets/Images/sign/Pens.png" alt="" />
                                 <p className="">Self Learning</p>
                             </div>
                             <div className='flex gap-1 items-center'>
-                                <img src="/assets/Images/Header/Pen.png" alt="" />
+                                <img src="/assets/Images/sign/Pens.png" alt="" />
                                 <p className="">One-click Support</p>
                             </div>
                             <div className='flex gap-1 items-center'>
-                                <img src="/assets/Images/Header/Pen.png" alt="" />
+                                <img src="/assets/Images/sign/Pens.png" alt="" />
                                 <p className="">India’s Best Universities</p>
                             </div>
                         </div>
                         <div className=" grid md:grid-cols-3 grid-cols-1 px-5  md:justify-between text-[#025450] font-bold md:text-base text-sm">
                             <div className='flex gap-1 items-center'>
-                                <img src="/assets/Images/Header/Pen.png" alt="" />
+                                <img src="/assets/Images/sign/Pens.png" alt="" />
                                 <p className="">Unique Coaching Methods</p>
                             </div>
                             <div className='flex gap-1 items-center'>
-                                <img src="/assets/Images/Header/Pen.png" alt="" />
+                                <img src="/assets/Images/sign/Pens.png" alt="" />
                                 <p className="">Affordable Fees</p>
                             </div>
                             <div className='flex gap-1 items-center'>
-                                <img src="/assets/Images/Header/Pen.png" alt="" />
+                                <img src="/assets/Images/sign/Pens.png" alt="" />
                                 <p className="">Best In TN</p>
                             </div>
                         </div>

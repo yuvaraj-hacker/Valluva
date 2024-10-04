@@ -18,7 +18,7 @@ function MCA() {
                 <div className="mt-5">
 
                     <div className="overflow-x-auto">
-                        <table className="min-w-full bg-white border border-gray-300 rounded-lg">
+                        <table className="min-w-full bg-white border border-gray-300 rounded-lg text-justify">
                             <thead>
                                 <tr className=" border-b">
                                     <th className="py-3 px-4 text-left text-sm font-semibold text-gray-700 border-r w-1/12">
@@ -49,7 +49,7 @@ function MCA() {
                                     <td className="py-2 px-4 text-sm text-gray-600 border-r border-b">		M.C.A. LATERAL ENTRY</td>
                                     <td className="py-2 px-4 text-sm text-gray-600 border-r border-b">	English</td>
                                     <td className="py-2 px-4 text-sm text-gray-600 " >
-                                            
+                                    Bachelor's Dgree in B.C.A
                                     </td>
                                 </tr>
                             </tbody>

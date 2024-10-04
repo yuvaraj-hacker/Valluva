@@ -23,9 +23,9 @@ function Header() {
 
             <Link to='/'>
 
-              <div className="flex gap-5 items-center">
-                <img src="/assets/Images/Header/logo 4.png" alt="logo" className='w-20' />
-                <img src="/assets/Images/Header/2.png" alt="logo" className='w-28' />
+              <div className="flex gap-2 items-center">
+                <img src="/assets/Images/Header/logo 4.png" alt="logo" className='w-14' />
+                <img src="/assets/Images/Header/2.png" alt="logo" className='w-40' />
 
               </div>
             </Link>
@@ -78,11 +78,20 @@ function Header() {
               >
                 Contact Us
               </Link>
+
+
+
+
+
             </div>
 
-
-            <div className="lg:block hidden">
-              <div className='flex justify-evenly items-center w-[13rem] rounded-3xl border border-[#F4E316] h-[3rem] bg-white '>
+            <div className='lg:block  hidden'>
+              <button className='px-4 py-2 rounded-3xl bg-[#f4e316] 2xl:text-lg  text-[#025450] font-bold text-sm '>
+                Login
+              </button>
+            </div>
+            <div className="lg:block hidden  fixed right-0 bottom-44">
+              <div className='flex flex-col justify-evenly items-center w-[3rem] rounded-3xl border border-[#F4E316] h-[13rem] bg-white '>
                 <a href='https://www.facebook.com/' target='_blank'>
                   <img className="w-7 h-7" src="/assets/Images/Header/facebook 3.png" alt="Facebook" />
                 </a>
@@ -187,6 +196,13 @@ function Header() {
               onClick={() => setOpen(false)}
             >
               Contact Us
+            </Link>
+            <Link
+              to="/"
+              className={`block py-2 text-lg hover:text-white focus:outline-none  hover:underline ${isActive("/") ? "text-white" : "text-[#f4e316]"} `}
+              onClick={() => setOpen(false)}
+            >
+              Login
             </Link>
           </div>
         )}

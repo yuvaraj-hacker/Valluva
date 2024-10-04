@@ -57,7 +57,7 @@ function Aboutt() {
   return (
     <>
 
-      <section className="bg-[url('/assets/Images/Header/Group-3.png')]  bg-no-repeat  bg-cover bg-center  h-[20vh] my-4 ">
+      <section className="bg-[url('/assets/Images/Header/Group-3.png')]  bg-no-repeat  bg-cover bg-center  h-[20vh] my-2 ">
         <div className="max-w-[90rem] mx-auto px-10 h-[20vh] items-center grid ">
           <div className="  md:text-5xl text-2xl text-white">About Us</div>
         </div>
@@ -98,23 +98,23 @@ function Aboutt() {
               waste time and money.
             </p>
             <div className="flex flex-wrap justify-between text-lg">
-              <div className="flex gap-1">
-                <img src="/assets/Images/About/Warranty.png" alt="" />
+              <div className="flex gap-1 items-center">
+                <img src="/assets/Images/sign/Warranty.png" alt="" />
                 <p className='md:text-base text-sm'>Quality service</p>
               </div>
-              <div className="flex gap-1">
-                <img src="/assets/Images/About/Online Support.png" alt="" />
+              <div className="flex gap-1 items-center">
+                <img src="/assets/Images/sign/Support.png" alt="" />
                 <p className='md:text-base text-sm'>Instant & Assured Support</p>
               </div>
             </div>
 
             <div className="flex-wrap flex justify-between text-lg">
-              <div className="flex gap-1">
-                <img src="/assets/Images/About/Internship.png" alt="" />
+              <div className="flex gap-1 items-center">
+                <img src="/assets/Images/sign/Coach.png" alt="" />
                 <p className='md:text-base text-sm'>Experienced instructors</p>
               </div>
-              <div className="flex gap-1">
-                <img src="/assets/Images/About/Clock (1).png" alt="" />
+              <div className="flex gap-1  items-center">
+                <img src="/assets/Images/sign/Cloc.png" className='w-7' alt="" />
                 <p className='md:text-base text-sm'>Flexible schedule</p>
               </div>
             </div>
@@ -159,12 +159,12 @@ function Aboutt() {
               advancement.
             </p>
             <div className="flex justify-between md:gap-0 gap-3 flex-wrap items-center">
-              <div className="flex gap-1 ">
-                <img src="/assets/Images/Footer/Ringer Volume (2).png" alt="" />
+              <div className="flex gap-1  items-center">
+                <img src="/assets/Images/Contact/Ringer.png" className='w-8' alt="" />
                 <p className="">+91 7010051075</p>
               </div>
-              <div className="flex gap-1">
-                <img src="/assets/Images/Footer/Letter (1).png" alt="" />
+              <div className="flex gap-1 items-center">
+                <img src="/assets/Images/Contact/Let.png" className='w-8' alt="" />
                 <p className="">info@valluvasedu.com</p>
               </div>
             </div>
